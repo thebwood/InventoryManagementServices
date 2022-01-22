@@ -13,10 +13,4 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\Games\" />
-    <Folder Include="Pages\Movies\" />
-    <Folder Include="Pages\Inventory\" />
-  </ItemGroup>
-
 </Project>
