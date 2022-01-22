@@ -9,14 +9,14 @@ namespace Game.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class GameController : ControllerBase
+    public class GamesController : ControllerBase
     {
 
         private readonly IMapper _mapper;
         private readonly IGameService _service;
 
 
-        public GameController(IGameService service, IMapper mapper)
+        public GamesController(IGameService service, IMapper mapper)
         {
             _service = service ??
                 throw new ArgumentNullException(nameof(service));
