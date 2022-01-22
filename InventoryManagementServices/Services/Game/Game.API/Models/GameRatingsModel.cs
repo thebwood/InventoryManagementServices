@@ -1,6 +1,6 @@
 ﻿namespace Game.API.Models
 {
-    public class GameRatingModel
+    public class GameRatingsModel
     {
         public Guid Id { get; set; }
         public string Rating { get; set; }

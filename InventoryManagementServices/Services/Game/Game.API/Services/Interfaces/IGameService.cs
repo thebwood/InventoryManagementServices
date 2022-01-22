@@ -7,7 +7,7 @@ namespace Game.API.Services.Interfaces
     {
         List<string> SaveDetail(GamesModel game);
         IEnumerable<Games> GetGames();
-        Games GetGame(Guid gameId);
+        Games GetGame(Guid? gameId);
         IEnumerable<GameRatings> GetGameRatings();
         List<GameSearchResultsModel> SearchGames(GameSearchModel searchRequest);
 
