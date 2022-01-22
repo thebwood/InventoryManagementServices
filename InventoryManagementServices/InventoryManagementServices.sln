@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefData.API", "Services\Ref
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movie.API", "Services\Movie\Movie.API\Movie.API.csproj", "{92561177-C4F6-4016-AADC-97C8EE95A9D3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Blazor", "Blazor", "{28009A4C-F5CC-4472-9B09-86C9FB547D35}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorApp", "BlazorApp", "{28009A4C-F5CC-4472-9B09-86C9FB547D35}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagement", "BlazorApp\InventoryManagement\InventoryManagement.csproj", "{AF330D13-6FEC-476B-ACCD-582EF5A18259}"
 EndProject
