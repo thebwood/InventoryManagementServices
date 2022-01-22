@@ -1,0 +1,42 @@
+﻿@inherits CommonMovieFunctions
+@page "/movies"
+
+<h3>Movies</h3>
+<div class="moviesList">
+    <div class="row">
+        <div class="col-12 text-right">
+            <MovieSearch OnSearch="HandleSearch"></MovieSearch>
+
+        </div>
+
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-12 text-right">
+            <MatButton OnClick="@AddMovie" Label="Add" Icon="add"></MatButton>
+
+        </div>
+
+    </div>
+    <br />
+
+    @if (_movies != null && _movies.Count() > 0)
+    {
+        <MoviesGrid Models="_movies"></MoviesGrid>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-12 text-left">
+                <span>There are no records</span>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .moviesList{
+        padding: 1%;
+    }
+</style>

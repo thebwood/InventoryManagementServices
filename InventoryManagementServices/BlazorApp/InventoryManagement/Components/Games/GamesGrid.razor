@@ -1,0 +1,45 @@
+﻿@inherits CommonGameFunctions
+
+@if (_games != null && _games.Count() > 0)
+{
+    <div>
+        <MatTable Items="_games"
+                  class="mat-elevation-z5"
+                  AllowSelection="true">
+            <MatTableHeader>
+                <th class="editButton">Edit</th>
+                <th class="gameTitle">Title</th>
+                <th class="gameDescription">Description</th>
+                <th class="gameRating">Rating</th>
+            </MatTableHeader>
+            <MatTableRow>
+                <td><MatButton OnClick="() => EditGame(context.Id)">Edit</MatButton></td>
+                <td>@context.Title</td>
+                <td>@context.Description</td>
+                <td>@context.GameRating</td>
+            </MatTableRow>
+        </MatTable>
+    </div>
+}
+else
+{
+    <span>There are no records</span>
+}
+
+<style>
+    .editButton {
+        width: 5%;
+    }
+
+    .gameTitle {
+        width: 20%;
+    }
+
+    .gameDescription {
+        width: 65%;
+    }
+
+    .gameRating {
+        width: 10%;
+    }
+</style>

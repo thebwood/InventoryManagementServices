@@ -1,0 +1,64 @@
+﻿@inherits CommonPeopleFunctions
+
+<MatCard>
+    <MatCardContent Class="personSearch">
+
+
+        <div class="row">
+            <div class="col-6">
+                <MatStringField FullWidth="true" @bind-Value="@_searchModel.FirstName" Label="FirstName"></MatStringField>
+            </div>
+            <div class="col-6">
+                <MatStringField FullWidth="true" @bind-Value="@_searchModel.LastName" Label="Last Name"></MatStringField>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <MatDatePicker FullWidth="true" @bind-Value="_searchModel.DateOfBirth" Label="Date Of Birth" TValue="DateTime?"></MatDatePicker>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <MatStringField FullWidth="true" @bind-Value="@_searchModel.City" Label="City"></MatStringField>
+            </div>
+            <div class="col-3 text-left">
+                <MatSelect Label="State" @bind-Value="_searchModel.StateId" TValue="int?">
+                    <MatOption TValue="int?" Value="null"></MatOption>
+                    @foreach (var state in _states)
+                    {
+                        <MatOption TValue="int?" Value="@state.Id">@state.Name</MatOption>
+                    }
+
+                </MatSelect>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <MatStringField FullWidth="true" @bind-Value="@_searchModel.BirthCity" Label="Birth City"></MatStringField>
+            </div>
+            <div class="col-3 text-left">
+                <MatSelect Label="Birth State" @bind-Value="_searchModel.BirthStateId" TValue="int?">
+                    <MatOption TValue="int?" Value="null"></MatOption>
+                    @foreach (var state in _states)
+                    {
+                        <MatOption TValue="int?" Value="@state.Id">@state.Name</MatOption>
+                    }
+
+                </MatSelect>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 text-right">
+                <MatButton Raised="true" OnClick="@SearchPerson" Label="Search" Icon="search"></MatButton>
+                <MatButton Type="button" OnClick="@ResetSearch" Label="Reset" Icon="clear"></MatButton>
+            </div>
+        </div>
+    </MatCardContent>
+</MatCard>
+<style>
+    .personSearch {
+        padding: 1%;
+    }
+</style>

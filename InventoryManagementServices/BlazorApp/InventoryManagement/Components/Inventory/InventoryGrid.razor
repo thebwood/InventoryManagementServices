@@ -1,0 +1,38 @@
+﻿@inherits CommonInventoryFunctions
+
+<div>
+    <MatTable Items="Models"
+              class="mat-elevation-z5"
+              AllowSelection="true">
+        <MatTableHeader>
+            <th class="editButton">Edit</th>
+            <th class="inventoryId">ID</th>
+            <th class="inventoryDescription">Description</th>
+            <th class="itemType">Item Type</th>
+        </MatTableHeader>
+        <MatTableRow>
+            <td><MatButton OnClick="() => EditInventory(context.Id)">Edit</MatButton></td>
+            <td>@context.Id</td>
+            <td>@context.Description</td>
+            <td>@context.ItemType</td>
+        </MatTableRow>
+    </MatTable>
+</div>
+
+<style>
+    .editButton {
+        width: 5%;
+    }
+
+    .inventoryId {
+        width: 15%;
+    }
+
+    .inventoryDescription {
+        width: 65%;
+    }
+
+    .itemType {
+        width: 15%;
+    }
+</style>

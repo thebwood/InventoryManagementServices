@@ -1,0 +1,49 @@
+﻿@inherits CommonMovieFunctions
+
+    <MatCard>
+        <MatCardContent Class="movieSearch">
+
+
+            <div class="row">
+                <div class="col-6">
+                    <MatStringField FullWidth="true" @bind-Value="@_searchModel.Title" Label="Title"></MatStringField>
+                </div>
+                <div class="col-3">
+                    <MatNumericUpDownField Label="Release Year" TValue="int?"
+                                           DecimalPlaces=0
+                                           @bind-Value=@_searchModel.ReleaseYear>
+                    </MatNumericUpDownField>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <MatStringField FullWidth="true" @bind-Value="@_searchModel.Description" Label="Description"></MatStringField>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 text-left">
+                    <MatSelect Label="Movie Rating" @bind-Value="_searchModel.MovieRatingsId" TValue="int?">
+                        <MatOption TValue="int?" Value="null"></MatOption>
+                        @foreach (var rating in _movieRatings)
+                        {
+                            <MatOption TValue="int?" Value="@rating.Id">@this.GetRatingWithAge(rating.Rating, rating.Age)</MatOption>
+                        }
+
+                    </MatSelect>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-12 text-right">
+                    <MatButton Raised="true" OnClick="@SearchMovie" Label="Search" Icon="search"></MatButton>
+                    <MatButton Type="button" OnClick="@ResetSearch" Label="Reset" Icon="clear"></MatButton>
+                </div>
+            </div>
+        </MatCardContent>
+    </MatCard>
+    <style>
+        .movieSearch {
+            padding: 1%;
+        }
+    </style>

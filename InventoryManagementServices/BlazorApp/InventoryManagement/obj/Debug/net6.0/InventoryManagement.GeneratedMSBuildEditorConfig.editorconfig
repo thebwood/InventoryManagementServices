@@ -22,8 +22,72 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Components/Games/GameSearch.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xHYW1lc1xHYW1lU2VhcmNoLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Components/Games/GamesGrid.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xHYW1lc1xHYW1lc0dyaWQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Components/Inventory/InventoryGrid.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xJbnZlbnRvcnlcSW52ZW50b3J5R3JpZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Components/Inventory/InventorySearch.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xJbnZlbnRvcnlcSW52ZW50b3J5U2VhcmNoLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Components/Movies/MovieSearch.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb3ZpZXNcTW92aWVTZWFyY2gucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Components/Movies/MoviesGrid.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNb3ZpZXNcTW92aWVzR3JpZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Components/People/PeopleGrid.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQZW9wbGVcUGVvcGxlR3JpZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Components/People/PersonSearch.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQZW9wbGVcUGVyc29uU2VhcmNoLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Pages/Games/Game.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2FtZXNcR2FtZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Pages/Games/Games.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2FtZXNcR2FtZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Pages/Inventory/InventoryDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW52ZW50b3J5XEludmVudG9yeURldGFpbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Pages/Inventory/InventoryList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW52ZW50b3J5XEludmVudG9yeUxpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Pages/Movies/Movie.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW92aWVzXE1vdmllLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Pages/Movies/Movies.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW92aWVzXE1vdmllcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Pages/People/People.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVvcGxlXFBlb3BsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Pages/People/Person.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVvcGxlXFBlcnNvbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/_Imports.razor]

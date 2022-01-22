@@ -1,0 +1,58 @@
+﻿@inherits CommonInventoryFunctions
+@page "/inventory/{InventoryId:long}"
+
+
+
+<h3>Movie</h3>
+
+<EditForm EditContext="_editContext">
+    <DataAnnotationsValidator />
+    <MatCard>
+        <MatCardContent Class="movieForm">
+            <div class="row">
+                <div class="col-12">
+                    @if (_inventory.Id > 0)
+                    {
+                        <div>Item: @_inventory.Id</div>
+                    }
+                    else
+                    {
+                        <div>New Item</div>
+                    }
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <MatTextField @bind-Value="@_inventory.Description" Label="Description" TextArea="true" FullWidth="true"></MatTextField>
+                    <ValidationMessage For="() => _inventory.Description" />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-6">
+                    <MatSelect Label="Item Type" @bind-Value="_inventory.ItemTypeId" TValue="int?">
+                        @foreach (var itemType in _itemTypes)
+                        {
+                            <MatOption TValue="int?" Value="@itemType.Id">@itemType.ItemType</MatOption>
+                        }
+                    </MatSelect>
+                    <ValidationMessage For="() => _inventory.ItemTypeId" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-right">
+                    <MatButton Raised="true" OnClick="@SaveInventory" Label="Save" Icon="save"></MatButton>
+                    <MatButton Type="button" OnClick="@CancelSave" Label="Cancel" Icon="cancel"></MatButton>
+                </div>
+            </div>
+        </MatCardContent>
+    </MatCard>
+</EditForm>
+
+<style>
+    .movieForm {
+        padding: 1%;
+    }
+</style>

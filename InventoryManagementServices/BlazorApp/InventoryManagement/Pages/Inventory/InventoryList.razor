@@ -1,0 +1,43 @@
+﻿@inherits CommonInventoryFunctions
+@page "/inventory"
+
+
+<h3>Inventory Search</h3>
+<div class="inventoryList">
+    <div class="row">
+        <div class="col-12 text-right">
+            <InventorySearch OnSearchInventory="HandleSearch"></InventorySearch>
+
+        </div>
+
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-12 text-right">
+            <MatButton OnClick="@AddInventory" Label="Add" Icon="add"></MatButton>
+
+        </div>
+
+    </div>
+    <br />
+
+    @if (_inventory != null && _inventory.Count > 0)
+    {
+        <InventoryGrid Models="_inventory"></InventoryGrid>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-12 text-left">
+                <span>There are no records</span>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .inventoryList {
+        padding: 1%;
+    }
+</style>

@@ -1,0 +1,42 @@
+﻿@inherits CommonPeopleFunctions
+@page "/people"
+
+<h3>People</h3>
+<div class="peopleList">
+    <div class="row">
+        <div class="col-12 text-right">
+            <PersonSearch OnSearchPeople="HandlePeopleSearch"></PersonSearch>
+
+        </div>
+
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-12 text-right">
+            <MatButton OnClick="@AddPerson" Label="Add" Icon="add"></MatButton>
+
+        </div>
+
+    </div>
+    <br />
+
+    @if (_people != null && _people.Count > 0)
+    {
+        <PeopleGrid Models="_people"></PeopleGrid>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-12 text-left">
+                <span>There are no records</span>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    .peopleList {
+        padding: 1%;
+    }
+</style>

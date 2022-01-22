@@ -1,0 +1,58 @@
+﻿@inherits CommonPeopleFunctions
+
+
+<div class="row">
+    <div class="col-12">
+        <MatTable Items="Models" UseSortHeaderRow="true">
+            <MatTableHeader>
+                <th class="editButton">Edit</th>
+                <th class="firstName">First Name</th>
+                <th class="lastName">Last Name</th>
+                <th class="dob">DOB</th>
+                <th class="city">City</th>
+                <th class="state">State</th>
+                <th class="birthCity">Birth City</th>
+                <th class="birthState">Birth State</th>
+            </MatTableHeader>
+            <MatTableRow>
+                <td><MatButton OnClick="() => EditPerson(context.Id)">Edit</MatButton></td>
+                <td>@context.FirstName</td>
+                <td>@context.LastName</td>
+                <td>@this.GetDateOfBirth(context.DateOfBirth)</td>
+                <td>@context.City</td>
+                <td>@context.State</td>
+                <td>@context.BirthCity</td>
+                <td>@context.BirthState</td>
+            </MatTableRow>
+        </MatTable>
+
+    </div>
+</div>
+
+<style>
+    .editButton {
+        width: 5%;
+    }
+
+    .firstName {
+        width: 15%;
+    }
+    .lastName {
+        width: 15%;
+    }
+    .dob {
+        width: 10%;
+    }
+    .city {
+        width: 15%;
+    }
+    .state {
+        width: 10%;
+    }
+    .birthCity {
+        width: 15%;
+    }
+    .birthState {
+        width: 10%;
+    }
+</style>

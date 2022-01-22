@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AznsbKTpH0l9RKFG82BwSCLsM+O0usndmoGs0bT8NxsevdP03nwQhawX/aWh+eb2VUWg2nIHPZqnyyx+FQXdVA==",
+  "dgSpecHash": "pdvnlQsObwGzbQCglcE+E59wX5258ctndhwZZOdwAVRPzbslWSdN7EQwBfKvIpOiA7y29NqDQQ03y0I9Z1f9Hw==",
   "success": true,
   "projectFilePath": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\BlazorApp\\InventoryManagement\\InventoryManagement.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\brian\\.nuget\\packages\\matblazor\\2.8.0\\matblazor.2.8.0.nupkg.sha512",
     "C:\\Users\\brian\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.1\\microsoft.aspnetcore.authorization.6.0.1.nupkg.sha512",
     "C:\\Users\\brian\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.1\\microsoft.aspnetcore.components.6.0.1.nupkg.sha512",
     "C:\\Users\\brian\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.1\\microsoft.aspnetcore.components.analyzers.6.0.1.nupkg.sha512",
@@ -28,6 +29,7 @@
     "C:\\Users\\brian\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\brian\\.nuget\\packages\\microsoft.jsinterop\\6.0.1\\microsoft.jsinterop.6.0.1.nupkg.sha512",
     "C:\\Users\\brian\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.1\\microsoft.jsinterop.webassembly.6.0.1.nupkg.sha512",
+    "C:\\Users\\brian\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\brian\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\brian\\.nuget\\packages\\system.io.pipelines\\6.0.1\\system.io.pipelines.6.0.1.nupkg.sha512",
     "C:\\Users\\brian\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",

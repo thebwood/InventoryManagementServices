@@ -1,0 +1,52 @@
+﻿@inherits CommonGameFunctions
+@page "/games/{GameId:long}"
+
+
+<h3>Movie</h3>
+
+<EditForm EditContext="_editContext">
+    <DataAnnotationsValidator />
+    <MatCard>
+        <MatCardContent Class="gameForm">
+            <div class="row">
+                <div class="col-6">
+                    <MatStringField FullWidth="true" @bind-Value="@_game.Title" Label="Title"></MatStringField>
+                    <ValidationMessage For="() => _game.Title" />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-12">
+                    <MatTextField @bind-Value="@_game.Description" Label="Description" TextArea="true" FullWidth="true"></MatTextField>
+                    <ValidationMessage For="() => _game.Description" />
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-6">
+                    <MatSelect Label="Game Rating" @bind-Value="_game.GameRatingsId" TValue="int?">
+                        @foreach (var rating in _gameRatings)
+                        {
+                            <MatOption TValue="int?" Value="@rating.Id">@this.GetRatingWithAge(rating.Rating, rating.Age)</MatOption>
+                        }
+
+                    </MatSelect>
+                    <ValidationMessage For="() => _game.GameRatingsId" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-right">
+                    <MatButton Raised="true" OnClick="@SaveGame" Label="Save" Icon="save"></MatButton>
+                    <MatButton Type="button" OnClick="@CancelSave" Label="Cancel" Icon="cancel"></MatButton>
+                </div>
+            </div>
+        </MatCardContent>
+    </MatCard>
+</EditForm>
+
+<style>
+    .gameForm {
+        padding: 1%;
+    }
+</style>
