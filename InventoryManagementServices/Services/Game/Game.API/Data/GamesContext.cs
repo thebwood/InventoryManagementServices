@@ -22,17 +22,7 @@ namespace Game.API.Data
         public virtual DbSet<GameTypes> GameTypes { get; set; } = null!;
         public virtual DbSet<GamesGameFormats> GamesGameFormats { get; set; } = null!;
         public virtual DbSet<GamesGameTypes> GamesGameTypes { get; set; } = null!;
-        public IConfiguration Configuration { get; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-
-                var connectionString = Configuration["Games"];
-                optionsBuilder.UseSqlServer(connectionString);
-            }
-}
+        public IConfiguration Configuration { get;}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

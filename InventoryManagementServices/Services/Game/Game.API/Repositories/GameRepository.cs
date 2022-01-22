@@ -11,7 +11,7 @@ namespace Game.API.Repositories
         public GameRepository(GamesContext context) => _context = context;
 
         public IEnumerable<Games> GetGames() => _context.Games;
-        public Games GetGame(Guid gameId) => _context.Games.Where(x => x.Id == gameId).Single();
+        public Games GetGame(Guid? gameId) => _context.Games.Where(x => x.Id == gameId).Single();
         public IEnumerable<GameRatings> GetGameRatings() => _context.GameRatings;
         public void SaveDetail(Games game)
         {
