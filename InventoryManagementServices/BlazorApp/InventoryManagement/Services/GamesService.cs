@@ -12,27 +12,27 @@ namespace InventoryManagement.Services
 
         public async Task<List<GamesModel>> GetGames()
         {
-            var baseURL = "https://localhost:44334/";
+            var baseURL = "http://localhost:5109/";
             return await this.GetAPIResult<List<GamesModel>>(baseURL, "api/games");
         }
 
         public async Task<GamesModel> GetGame(long gameId)
         {
-            var baseURL = "https://localhost:44334/";
+            var baseURL = "http://localhost:5109/";
             return await this.GetAPIResult<GamesModel>(baseURL, "api/games/" + gameId.ToString());
         }
 
 
         public async Task<List<string>> SaveGame(GamesModel game)
         {
-            var baseURL = "https://localhost:44334/";
+            var baseURL = "http://localhost:5109/";
             return await this.PostAPIResult<List<string>, GamesModel>(baseURL, "api/games/", game);
 
         }
 
         public async Task<List<GameSearchResultsModel>> SearchGames(GameSearchModel searchModel)
         {
-            var baseURL = "https://localhost:44334/";
+            var baseURL = "http://localhost:5109/";
             return await this.PostAPIResult<List<GameSearchResultsModel>, GameSearchModel>(baseURL, "api/games/search", searchModel);
         }
 
@@ -42,7 +42,7 @@ namespace InventoryManagement.Services
 
         public async Task<List<GameRatingsModel>> GetGameRatings()
         {
-            var baseURL = "https://localhost:44334/";
+            var baseURL = "http://localhost:5109/";
             return await this.GetAPIResult<List<GameRatingsModel>>(baseURL, "api/games/ratings");
         }
 
