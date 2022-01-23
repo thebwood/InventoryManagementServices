@@ -8,10 +8,10 @@ namespace InventoryManagement.Models.Inventory
 {
     public class InventoryItemsModel
     {
-        public long Id { get; set; }
+        public Guid? Id { get; set; }
         [Required(ErrorMessage = "Description is Required")]
         public string Description { get; set; }
         [Required(ErrorMessage = "Item Type is Required")]
-        public int? ItemTypeId { get; set; }
+        public Guid? ItemTypeId { get; set; }
     }
 }

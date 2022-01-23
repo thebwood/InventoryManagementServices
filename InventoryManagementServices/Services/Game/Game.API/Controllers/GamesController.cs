@@ -4,9 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using AutoMapper;
 using Game.API.Services.Interfaces;
+using Microsoft.AspNetCore.Cors;
 
 namespace Game.API.Controllers
 {
+    [EnableCors("SiteCorsPolicy")]
     [Route("api/[controller]")]
     [ApiController]
     public class GamesController : ControllerBase

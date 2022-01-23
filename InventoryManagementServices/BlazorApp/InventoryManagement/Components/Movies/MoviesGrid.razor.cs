@@ -14,7 +14,7 @@ namespace InventoryManagement.Components.Movies
         #endregion
 
 
-        public void EditMovie(long movieId)
+        public void EditMovie(Guid? movieId)
         {
             this.NavigationManager.NavigateTo("movies/" + movieId.ToString());
 

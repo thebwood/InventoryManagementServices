@@ -36,7 +36,7 @@ namespace InventoryManagement.Components.Games
         #endregion
         #region Events
 
-        private void EditGame(long gameId)
+        private void EditGame(Guid? gameId)
         {
             this.NavigationManager.NavigateTo("games/" + gameId.ToString());
         }

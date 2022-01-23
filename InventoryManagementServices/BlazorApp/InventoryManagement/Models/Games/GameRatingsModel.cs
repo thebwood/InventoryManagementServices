@@ -7,9 +7,9 @@ namespace InventoryManagement.Models.Games
 {
     public class GameRatingsModel
     {
-        public int? Id { get; set; }
+        public Guid? Id { get; set; }
         public string Rating { get; set; }
-        public int Age { get; set; }
+        public int? Age { get; set; }
 
     }
 }

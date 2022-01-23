@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+Ed3sgMQbX498p3yC6mmTnKsevxbqvzPgiZDUE62bvQ=",
+  "Hash": "5KwoWU1hWVY2W47I92KbXYfLvXAIIOLt35aAWlcM+Ac=",
   "Source": "InventoryManagement",
   "BasePath": "/",
   "Mode": "Root",
@@ -6985,6 +6985,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\BlazorApp\\InventoryManagement\\wwwroot\\css\\layout.css",
+      "SourceId": "InventoryManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\BlazorApp\\InventoryManagement\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/layout.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\layout.css"
     },
     {
       "Identity": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\BlazorApp\\InventoryManagement\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",

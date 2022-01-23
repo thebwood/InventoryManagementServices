@@ -4,14 +4,7 @@
     <MatCardContent Class="inventorySearch">
 
 
-        <div class="row">
-            <div class="col-3 text-left">
-                <MatNumericUpDownField Label="ID" TValue="long?"
-                                        DecimalPlaces=0
-                                        @bind-Value=@_searchModel.Id>
-                </MatNumericUpDownField>
-            </div>
-        </div>
+
         <div class="row">
             <div class="col-12">
                 <MatStringField FullWidth="true" @bind-Value="@_searchModel.Description" Label="Description"></MatStringField>
@@ -19,11 +12,11 @@
         </div>
         <div class="row">
             <div class="col-3 text-left">
-                <MatSelect Label="Item Type" @bind-Value="_searchModel.ItemTypeId" TValue="int?">
-                    <MatOption TValue="int?" Value="null"></MatOption>
+                <MatSelect Label="Item Type" @bind-Value="_searchModel.ItemTypeId" TValue="Guid?">
+                    <MatOption TValue="Guid?" Value="null"></MatOption>
                     @foreach (var record in _itemTypes)
                     {
-                        <MatOption TValue="int?" Value="@record.Id">@record.ItemType</MatOption>
+                        <MatOption TValue="Guid?" Value="@record.Id">@record.ItemType</MatOption>
                     }
                 </MatSelect>
             </div>

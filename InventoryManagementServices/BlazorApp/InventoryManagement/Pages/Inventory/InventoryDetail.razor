@@ -11,7 +11,7 @@
         <MatCardContent Class="movieForm">
             <div class="row">
                 <div class="col-12">
-                    @if (_inventory.Id > 0)
+                    @if (_inventory.Id != null)
                     {
                         <div>Item: @_inventory.Id</div>
                     }
@@ -31,10 +31,10 @@
             <br />
             <div class="row">
                 <div class="col-6">
-                    <MatSelect Label="Item Type" @bind-Value="_inventory.ItemTypeId" TValue="int?">
+                    <MatSelect Label="Item Type" @bind-Value="_inventory.ItemTypeId" TValue="Guid?">
                         @foreach (var itemType in _itemTypes)
                         {
-                            <MatOption TValue="int?" Value="@itemType.Id">@itemType.ItemType</MatOption>
+                            <MatOption TValue="Guid?" Value="@itemType.Id">@itemType.ItemType</MatOption>
                         }
                     </MatSelect>
                     <ValidationMessage For="() => _inventory.ItemTypeId" />

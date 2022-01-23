@@ -5,9 +5,25 @@ using Game.API.Services;
 using Game.API.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
+
+var siteCorsPolicy = "SiteCorsPolicy";
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: siteCorsPolicy,
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:5253")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials();
+        });
+});
 
 builder.Services.AddControllers();
 builder.Services.AddScoped<IGameRepository, GameRepository>();
@@ -27,7 +43,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors(siteCorsPolicy);
 app.UseAuthorization();
 
 app.MapControllers();

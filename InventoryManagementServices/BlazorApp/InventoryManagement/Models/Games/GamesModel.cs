@@ -8,13 +8,13 @@ namespace InventoryManagement.Models.Games
 {
     public class GamesModel
     {
-        public long Id { get; set; }
+        public Guid? Id { get; set; }
         [Required(ErrorMessage = "Title is Required")]
         public string Title { get; set; }
         [Required(ErrorMessage = "Description is Required")]
         public string Description { get; set; }
         [Required(ErrorMessage = "Game Rating is Required")]
-        public int? GameRatingsId { get; set; }
+        public Guid? GameRatingsId { get; set; }
 
     }
 }

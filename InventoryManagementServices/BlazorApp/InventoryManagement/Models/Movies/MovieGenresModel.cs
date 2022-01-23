@@ -7,7 +7,7 @@ namespace InventoryManagement.Models.Movies
 {
     public class MovieGenresModel
     {
-        public long Id { get; set; }
+        public Guid? Id { get; set; }
         public string Description { get; set; }
     }
 }

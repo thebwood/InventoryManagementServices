@@ -19,7 +19,7 @@ namespace InventoryManagement.Components.Inventory
 
         #region Events
 
-        private void EditInventory(long inventoryId)
+        private void EditInventory(Guid? inventoryId)
         {
             this.NavigationManager.NavigateTo("inventory/" + inventoryId.ToString());
         }

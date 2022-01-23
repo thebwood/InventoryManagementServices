@@ -7,7 +7,7 @@ namespace InventoryManagement.Models.Inventory
 {
     public class ItemTypesModel
     {
-        public int Id { get; set; }
+        public Guid? Id { get; set; }
         public string ItemType { get; set; }
     }
 }

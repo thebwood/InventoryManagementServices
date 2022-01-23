@@ -9,6 +9,7 @@ D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagem
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\icudt_no_CJK.dat
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\InventoryManagement.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\InventoryManagement.pdb
+D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\MatBlazor.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Forms.dll
@@ -38,6 +39,7 @@ D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagem
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Win32.Registry.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\mscorlib.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\netstandard.dll
+D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\Newtonsoft.Json.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\System.AppContext.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\System.Buffers.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\System.Collections.Concurrent.dll
@@ -268,6 +270,7 @@ D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagem
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\System.Diagnostics.StackTrace.dll.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\System.Buffers.dll.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\System.Threading.Tasks.Dataflow.dll.gz
+D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\Newtonsoft.Json.dll.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\System.Net.ServicePoint.dll.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\System.Diagnostics.Tracing.dll.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\icudt_no_CJK.dat.gz
@@ -344,6 +347,7 @@ D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagem
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\System.ComponentModel.dll.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\System.Xml.Linq.dll.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\Microsoft.Win32.Primitives.dll.gz
+D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\MatBlazor.dll.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\System.Collections.Concurrent.dll.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\System.Runtime.Serialization.Xml.dll.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\System.Text.Encoding.CodePages.dll.gz
@@ -401,6 +405,7 @@ D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagem
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\InventoryManagement.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\ref\InventoryManagement.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\InventoryManagement.pdb
+D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\MatBlazor.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Forms.dll
@@ -423,6 +428,7 @@ D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagem
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\Microsoft.JSInterop.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\Microsoft.JSInterop.WebAssembly.dll
+D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\System.IO.Pipelines.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\Microsoft.CSharp.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\Microsoft.VisualBasic.Core.dll
@@ -603,6 +609,7 @@ D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagem
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\InventoryManagement.AssemblyInfo.cs
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\InventoryManagement.csproj.CoreCompileInputs.cache
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\InventoryManagement.MvcApplicationPartsAssemblyInfo.cache
+D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\build-gz\q2dL99EI.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\build-gz\KUXyG6Rq.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\build-gz\o9owhbzh.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\build-gz\rAeHokXi.gz
@@ -625,6 +632,7 @@ D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagem
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\build-gz\1qbA6b3X.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\build-gz\v5eYVplT.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\build-gz\+tTWbUch.gz
+D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\build-gz\d609YgIu.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\build-gz\QTZ+TFx0.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\build-gz\gCJaVi7P.gz
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\build-gz\3jSS9nH9.gz
@@ -813,11 +821,3 @@ D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagem
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\InventoryManagement.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\ref\InventoryManagement.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\InventoryManagement.pdb
-D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\MatBlazor.dll
-D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\Newtonsoft.Json.dll
-D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\Newtonsoft.Json.dll.gz
-D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\wwwroot\_framework\MatBlazor.dll.gz
-D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\MatBlazor.dll
-D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\Newtonsoft.Json.dll
-D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\build-gz\q2dL99EI.gz
-D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\build-gz\d609YgIu.gz

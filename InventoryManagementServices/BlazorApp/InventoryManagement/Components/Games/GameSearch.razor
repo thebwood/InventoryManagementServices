@@ -23,11 +23,11 @@
         </div>
         <div class="row">
             <div class="col-3 text-left">
-                <MatSelect Label="Rating" @bind-Value="_searchModel.GameRatingsId" TValue="int?">
-                    <MatOption TValue="int?" Value="null"></MatOption>
+                <MatSelect Label="Rating" @bind-Value="_searchModel.GameRatingsId" TValue="Guid?">
+                    <MatOption TValue="Guid?" Value="null"></MatOption>
                     @foreach (var rating in _gameRatings)
                     {
-                        <MatOption TValue="int?" Value="@rating.Id">@this.GetRatingWithAge(rating.Rating, rating.Age)</MatOption>
+                        <MatOption TValue="Guid?" Value="@rating.Id">@this.GetRatingWithAge(rating.Rating, rating.Age)</MatOption>
                     }
 
                 </MatSelect>

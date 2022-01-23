@@ -34,10 +34,10 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <MatSelect Label="Movie Rating" @bind-Value="_movie.MovieRatingsId" TValue="int?">
+                    <MatSelect Label="Movie Rating" @bind-Value="_movie.MovieRatingsId" TValue="Guid?">
                         @foreach (var rating in _movieRatings)
                         {
-                            <MatOption TValue="int?" Value="@rating.Id">@this.GetRatingWithAge(rating.Rating, rating.Age)</MatOption>
+                            <MatOption TValue="Guid?" Value="@rating.Id">@this.GetRatingWithAge(rating.Rating, rating.Age)</MatOption>
                         }
 
                     </MatSelect>

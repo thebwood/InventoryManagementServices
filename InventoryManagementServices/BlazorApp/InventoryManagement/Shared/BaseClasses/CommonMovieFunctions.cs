@@ -16,7 +16,7 @@ namespace InventoryManagement.Shared.BaseClasses
 
         #region Events
 
-        public string GetRatingWithAge(string rating, int age)
+        public string GetRatingWithAge(string rating, int? age)
         {
             return rating + " (" + age.ToString() + "+)";
 
