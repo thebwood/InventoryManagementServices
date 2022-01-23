@@ -59,3 +59,4 @@ D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagem
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\Services\Movie\Movie.API\obj\Debug\net6.0\ref\Movie.API.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\Services\Movie\Movie.API\obj\Debug\net6.0\Movie.API.pdb
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\Services\Movie\Movie.API\obj\Debug\net6.0\Movie.API.genruntimeconfig.cache
+D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\Services\Movie\Movie.API\obj\Debug\net6.0\Movie.API.csproj.AssemblyReference.cache

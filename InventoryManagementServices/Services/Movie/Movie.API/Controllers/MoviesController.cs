@@ -11,11 +11,11 @@ namespace Movie.API.Controllers
     [EnableCors("SiteCorsPolicy")]
     [Route("api/[controller]")]
     [ApiController]
-    public class MovieController : ControllerBase
+    public class MoviesController : ControllerBase
     {
         private IMovieService _service;
         private readonly IMapper _mapper;
-        public MovieController(IMovieService service, IMapper mapper)
+        public MoviesController(IMovieService service, IMapper mapper)
         {
             _service = service ??
                 throw new ArgumentNullException(nameof(service));
