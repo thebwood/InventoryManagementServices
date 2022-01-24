@@ -603,7 +603,6 @@ D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagem
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\icudt_CJK.dat
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\icudt_EFIGS.dat
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\bin\Debug\net6.0\icudt_no_CJK.dat
-D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\InventoryManagement.csproj.AssemblyReference.cache
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\InventoryManagement.GeneratedMSBuildEditorConfig.editorconfig
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\InventoryManagement.AssemblyInfoInputs.cache
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\InventoryManagement.AssemblyInfo.cs

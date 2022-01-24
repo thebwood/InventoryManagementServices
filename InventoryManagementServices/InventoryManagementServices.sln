@@ -17,17 +17,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inventory", "Inventory", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RefData", "RefData", "{4523F1F4-9EFE-4AE0-87DC-02B6A478F46A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.API", "Services\Game\Game.API\Game.API.csproj", "{82A8837F-1E56-4A68-A9EC-C0253511D399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game.API", "Services\Game\Game.API\Game.API.csproj", "{82A8837F-1E56-4A68-A9EC-C0253511D399}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.API", "Services\Inventory\Inventory.API\Inventory.API.csproj", "{92C56EE1-00ED-413E-8400-21D6D09D7548}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.API", "Services\Inventory\Inventory.API\Inventory.API.csproj", "{92C56EE1-00ED-413E-8400-21D6D09D7548}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefData.API", "Services\RefData\RefData.API\RefData.API.csproj", "{5EA230AF-B512-4E3E-B64A-C597DF98419A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RefData.API", "Services\RefData\RefData.API\RefData.API.csproj", "{5EA230AF-B512-4E3E-B64A-C597DF98419A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movie.API", "Services\Movie\Movie.API\Movie.API.csproj", "{92561177-C4F6-4016-AADC-97C8EE95A9D3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlazorApp", "BlazorApp", "{28009A4C-F5CC-4472-9B09-86C9FB547D35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagement", "BlazorApp\InventoryManagement\InventoryManagement.csproj", "{5219275A-D3C5-4979-8872-FC292C8E1F7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryManagement", "BlazorApp\InventoryManagement\InventoryManagement.csproj", "{5219275A-D3C5-4979-8872-FC292C8E1F7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Person", "Person", "{39C2A990-4ED4-4CC6-B24E-3CCB08562DA0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Person.API", "Services\Person\Person.API\Person.API.csproj", "{C282046E-2CAD-4BC3-A400-9B072577DE88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +59,10 @@ Global
 		{5219275A-D3C5-4979-8872-FC292C8E1F7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5219275A-D3C5-4979-8872-FC292C8E1F7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5219275A-D3C5-4979-8872-FC292C8E1F7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C282046E-2CAD-4BC3-A400-9B072577DE88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C282046E-2CAD-4BC3-A400-9B072577DE88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C282046E-2CAD-4BC3-A400-9B072577DE88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C282046E-2CAD-4BC3-A400-9B072577DE88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +77,8 @@ Global
 		{5EA230AF-B512-4E3E-B64A-C597DF98419A} = {4523F1F4-9EFE-4AE0-87DC-02B6A478F46A}
 		{92561177-C4F6-4016-AADC-97C8EE95A9D3} = {2AA44049-16AE-4EC7-9623-B7C89C7F2E8E}
 		{5219275A-D3C5-4979-8872-FC292C8E1F7B} = {28009A4C-F5CC-4472-9B09-86C9FB547D35}
+		{39C2A990-4ED4-4CC6-B24E-3CCB08562DA0} = {1928E39D-499E-4EEF-84E8-02507BD89EB5}
+		{C282046E-2CAD-4BC3-A400-9B072577DE88} = {39C2A990-4ED4-4CC6-B24E-3CCB08562DA0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BA75D78A-7A7A-471B-AACE-A2C1CA11F010}
