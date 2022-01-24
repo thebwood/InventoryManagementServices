@@ -38,7 +38,7 @@ namespace InventoryManagement.Components.Games
 
         private void EditGame(Guid? gameId)
         {
-            this.NavigationManager.NavigateTo("games/" + gameId.ToString());
+            this.NavigationManager.NavigateTo("games/Edit/" + gameId.ToString());
         }
 
         private void GamesSearched(List<GameSearchResultsModel> games)

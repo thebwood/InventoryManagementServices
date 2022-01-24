@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Movie.API.Data
+﻿namespace Movie.API.Models
 {
-    public partial class MovieFormats
+    public class MovieFormatsModel
     {
         public Guid Id { get; set; }
         public Guid? MovieId { get; set; }

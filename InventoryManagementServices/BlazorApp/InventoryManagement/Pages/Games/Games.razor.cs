@@ -27,7 +27,7 @@ namespace InventoryManagement.Pages.Games
 
         private void AddGame()
         {
-            this.NavigationManager.NavigateTo("games/0");
+            this.NavigationManager.NavigateTo("games/Add");
 
         }
 

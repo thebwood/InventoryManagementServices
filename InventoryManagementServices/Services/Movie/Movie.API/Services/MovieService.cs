@@ -21,7 +21,7 @@ namespace Movie.API.Services
 
         public List<MovieSearchResultsModel> SearchMovies(MovieSearchModel model) => _movieRepository.SearchMovies(model);
 
-        public Movies GetMovie(long movieId) => _movieRepository.GetMovie(movieId);
+        public Movies GetMovie(Guid? movieId) => _movieRepository.GetMovie(movieId);
 
         public IEnumerable<MovieRatings> GetMovieRatings() => _movieRepository.GetMovieRatings();
         public IEnumerable<MovieGenres> GetMovieGenres() => _movieRepository.GetMovieGenres();
@@ -32,7 +32,7 @@ namespace Movie.API.Services
             if (errors.Count() == 0)
             {
                 var existingMovie = new Movies();
-                if (movie.Id > 0)
+                if (movie.Id != null)
                     existingMovie = _movieRepository.GetMovie(movie.Id);
 
                 _mapper.Map<MoviesModel, Movies>(movie, existingMovie);

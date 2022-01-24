@@ -22,6 +22,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Components/Games/GameDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xHYW1lc1xHYW1lRGV0YWlsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Components/Games/GameSearch.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xHYW1lc1xHYW1lU2VhcmNoLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -54,8 +58,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQZW9wbGVcUGVyc29uU2VhcmNoLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Pages/Games/Game.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2FtZXNcR2FtZS5yYXpvcg==
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Pages/Games/AddGame.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2FtZXNcQWRkR2FtZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Pages/Games/EditGame.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR2FtZXNcRWRpdEdhbWUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Development/GitHub/Microservices/InventoryManagementServices/InventoryManagementServices/BlazorApp/InventoryManagement/Pages/Games/Games.razor]

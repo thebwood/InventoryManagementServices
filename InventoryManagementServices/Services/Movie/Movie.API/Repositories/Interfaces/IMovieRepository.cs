@@ -6,7 +6,7 @@ namespace Movie.API.Repositories.Interfaces
     public interface IMovieRepository
     {
         IEnumerable<Movies> GetMovies();
-        Movies GetMovie(long movieId);
+        Movies GetMovie(Guid? movieId);
         IEnumerable<MovieRatings> GetMovieRatings();
         void SaveDetail(Movies movie);
         List<MovieSearchResultsModel> SearchMovies(MovieSearchModel model);

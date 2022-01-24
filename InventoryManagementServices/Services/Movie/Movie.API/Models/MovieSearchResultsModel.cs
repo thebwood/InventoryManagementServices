@@ -7,11 +7,11 @@ namespace Movie.API.Models
 {
     public class MovieSearchResultsModel
     {
-        public long Id { get; set; }
+        public Guid? Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime? ReleaseDate { get; set; }
-        public int MovieRatingsId { get; set; }
+        public Guid MovieRatingsId { get; set; }
         public int? Hours { get; set; }
         public int? Minutes { get; set; }
         public decimal? BoxOffice { get; set; }

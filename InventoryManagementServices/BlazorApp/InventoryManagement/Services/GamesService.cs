@@ -16,7 +16,7 @@ namespace InventoryManagement.Services
             return await this.GetAPIResult<List<GamesModel>>(baseURL, "api/games");
         }
 
-        public async Task<GamesModel> GetGame(long gameId)
+        public async Task<GamesModel> GetGame(Guid? gameId)
         {
             var baseURL = "http://localhost:5109/";
             return await this.GetAPIResult<GamesModel>(baseURL, "api/games/" + gameId.ToString());

@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Movie.API.Data
+namespace Game.API.Data
 {
-    public partial class MovieGenres
+    public partial class GameGenres
     {
         public Guid Id { get; set; }
-        public Guid MovieId { get; set; }
-        public Guid MovieGenreId { get; set; }
+        public Guid GameId { get; set; }
+        public Guid GameGenreId { get; set; }
         public string GenreDescription { get; set; }
     }
 }

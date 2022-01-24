@@ -8,7 +8,7 @@ namespace Movie.API.Services.Interfaces
     {
         List<string> SaveDetail(MoviesModel movie);
         IEnumerable<Movies> GetMovies();
-        Movies GetMovie(long movieId);
+        Movies GetMovie(Guid? movieId);
         IEnumerable<MovieRatings> GetMovieRatings();
         IEnumerable<MovieGenres> GetMovieGenres();
         List<MovieSearchResultsModel> SearchMovies(MovieSearchModel model);

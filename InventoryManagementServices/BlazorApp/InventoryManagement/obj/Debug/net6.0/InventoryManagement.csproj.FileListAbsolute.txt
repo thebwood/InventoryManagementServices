@@ -820,3 +820,4 @@ D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagem
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\InventoryManagement.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\ref\InventoryManagement.dll
 D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\InventoryManagement.pdb
+D:\Development\GitHub\Microservices\InventoryManagementServices\InventoryManagementServices\BlazorApp\InventoryManagement\obj\Debug\net6.0\InventoryManagement.csproj.AssemblyReference.cache
