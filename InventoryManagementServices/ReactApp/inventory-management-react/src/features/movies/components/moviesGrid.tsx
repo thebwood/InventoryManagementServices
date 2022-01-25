@@ -29,10 +29,10 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   }));
   
 const MoviesGrid: React.FC<ChildProps> = (props) => {
-    const [page, setPage] = React.useState(0);
-    const [rowsPerPage, setRowsPerPage] = React.useState(10);
+    const {Movies} = props;
 
-
+    if(!Movies || Movies.length == 0)
+      return <div>No movies were found!</div>
 
     return(
         <TableContainer component={Paper}>
@@ -45,7 +45,7 @@ const MoviesGrid: React.FC<ChildProps> = (props) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {props.Movies.map((row) => (
+            {Movies.map((row) => (
               <StyledTableRow key={row.id}>
                 <StyledTableCell component="th" scope="row">
                   {row.id}

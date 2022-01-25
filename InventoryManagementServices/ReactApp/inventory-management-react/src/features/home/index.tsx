@@ -1,6 +1,6 @@
-import React, { FC, Fragment } from "react";
+import React, { Fragment } from "react";
 
-const Home: FC = () => {
+const Home: React.FC = () => {
     return(
         <Fragment>
             <h1>Welcome to the Inventory Management System</h1>

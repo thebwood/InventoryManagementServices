@@ -1,10 +1,10 @@
-import React, { FC, Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Movie } from "../../app/models/movie";
 import { useService } from "../../app/services/services";
 import MoviesGrid from "./components/moviesGrid";
 import "./Movies.scss";
 
-const Movies = () => {
+const Movies: React.FC = () => {
     const [movies, setMovies] = useState<Movie[]>([]);
 
     const {movieService} = useService();

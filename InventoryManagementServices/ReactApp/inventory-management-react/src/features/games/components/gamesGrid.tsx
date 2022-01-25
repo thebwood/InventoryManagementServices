@@ -29,6 +29,11 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   }));
   
 const GamesGrid: React.FC<ChildProps> = (props) => {
+    const {Games} = props;
+
+    if(!Games || Games.length == 0)
+      return <div>No games were found!</div>
+
     return(
         <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -40,7 +45,7 @@ const GamesGrid: React.FC<ChildProps> = (props) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {props.Games.map((row) => (
+            {Games.map((row) => (
               <StyledTableRow key={row.id}>
                 <StyledTableCell component="th" scope="row">
                   {row.id}
