@@ -1,15 +1,16 @@
 import { createContext, useContext } from "react";
 import GameService from "./GameService";
+import MovieService from "./movieService";
 
 interface Services {
     gameService: GameService;
+    movieService: MovieService;
 }
-
 
 export const service: Services = {
-    gameService: new GameService()
+    gameService: new GameService(),
+    movieService: new MovieService()
 }
-
 
 export const ServiceContext = createContext(service);
 

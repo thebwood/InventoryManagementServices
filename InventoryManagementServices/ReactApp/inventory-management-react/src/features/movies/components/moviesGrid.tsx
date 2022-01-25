@@ -1,11 +1,11 @@
 import { Paper, styled, Table, TableBody, TableContainer, TableHead, TableRow } from "@mui/material";
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import React from "react";
-import { Game } from "../../../app/models/game";
+import { Movie } from "../../../app/models/movie";
 
 
 interface ChildProps {
-  Games: Game[]
+  Movies: Movie[]
 }
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -28,7 +28,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
     },
   }));
   
-const GamesGrid: React.FC<ChildProps> = (props) => {
+const MoviesGrid: React.FC<ChildProps> = (props) => {
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
@@ -45,7 +45,7 @@ const GamesGrid: React.FC<ChildProps> = (props) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {props.Games.map((row) => (
+            {props.Movies.map((row) => (
               <StyledTableRow key={row.id}>
                 <StyledTableCell component="th" scope="row">
                   {row.id}
@@ -63,4 +63,4 @@ const GamesGrid: React.FC<ChildProps> = (props) => {
 };
 
 
-export default GamesGrid;
+export default MoviesGrid;

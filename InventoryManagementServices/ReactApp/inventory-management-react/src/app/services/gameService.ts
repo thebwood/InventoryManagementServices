@@ -8,9 +8,9 @@ export default class GameService {
     loadGames = async () => {
         try {
             this.games = await agent.Games.list();
-        } catch (error) {
+        } 
+        catch (error) {
             console.log(error);
-
         }
     }
 

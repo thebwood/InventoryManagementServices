@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Game, GameFormValues } from '../models/game';
 import { GameSearch } from '../models/gameSearch';
 import { GameSearchResults } from '../models/gameSearchResults';
+import { Movie, MovieFormValues } from '../models/movie';
 import { PaginatedResult } from '../models/pagination';
 
 
@@ -13,7 +14,8 @@ const sleep = (delay: number) => {
     })
 }
 
-axios.defaults.baseURL = process.env.GAME_API_URL;
+// need to implement an API Gateway
+// axios.defaults.baseURL = process.env.GAME_API_URL
 
 
 axios.interceptors.response.use(async response => {
@@ -60,19 +62,61 @@ const requests = {
     del: <T>(url: string) => axios.delete<T>(url).then(responseBody),
 }
 
+// const Games = {
+//     search: (params: GameSearch)=> axios.post<PaginatedResult<GameSearchResults[]>>('/games', params)
+//             .then(responseBody),
+//     list: () => axios.get<Game[]>('/games')
+//         .then(responseBody),
+//     details: (id: string) => requests.get<Game>(`/games/${id}`),
+//     create: (activity: GameFormValues) => requests.post<void>('/games', activity),
+//     update: (activity: GameFormValues) => requests.put<void>(`/games/${activity.id}`, activity),
+
+// }
+
+
 const Games = {
-    search: (params: GameSearch)=> axios.post<PaginatedResult<GameSearchResults[]>>('/games', params)
-    .then(responseBody),
-    list: () => axios.get<Game[]>('/games')
-        .then(responseBody),
-    details: (id: string) => requests.get<Game>(`/games/${id}`),
-    create: (activity: GameFormValues) => requests.post<void>('/games', activity),
-    update: (activity: GameFormValues) => requests.put<void>(`/games/${activity.id}`, activity),
+    search: (params: GameSearch)=> {
+        axios.defaults.baseURL = process.env.GAME_API_URL;
+        axios.post<GameSearchResults[]>('/games', params)
+            .then(responseBody);
+    },
+
+    list: () => {
+        axios.defaults.baseURL = process.env.GAME_API_URL;
+        return axios.get<Game[]>('/games')
+            .then(responseBody)
+    },
+    details: (id: string) => {
+        axios.defaults.baseURL = process.env.GAME_API_URL;
+        return requests.get<Game>(`/games/${id}`);
+    },
+    save: (game: GameFormValues) => {
+        axios.defaults.baseURL = process.env.GAME_API_URL;
+        return requests.post<void>('/games', game);
+    }
+}
+
+
+const Movies = {
+    list: () => {
+        axios.defaults.baseURL = process.env.MOVIE_API_URL;
+        return axios.get<Movie[]>('/movies')
+            .then(responseBody)
+    },
+    details: (id: string) => {
+        axios.defaults.baseURL = process.env.MOVIE_API_URL;
+        return requests.get<Movie>(`/movies/${id}`);
+    },
+    save: (movie: MovieFormValues) => {
+        axios.defaults.baseURL = process.env.MOVIE_API_URL;
+        return requests.post<void>('/movies', movie);
+    }
 
 }
 
 const agent = {
-    Games
+    Games,
+    Movies
 }
 
 export default agent;

@@ -4,7 +4,7 @@ import { useService } from "../../app/services/services";
 import GamesGrid from "./components/gamesGrid";
 
 
-function Games(){
+const Games = () => {
     const {gameService} = useService();
     const { loadGames} = gameService;
 
