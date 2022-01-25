@@ -5,7 +5,7 @@ import "./Movies.scss";
 
 const Movies = () => {
     const {movieService} = useService();
-    const { loadMovies } = movieService;
+    const { movies, loadMovies } = movieService;
 
     useEffect(() => {
         loadMovies();
@@ -15,7 +15,15 @@ const Movies = () => {
     return (
         <Fragment>
             <h1>Movies</h1>
-            <MoviesGrid Movies={movieService.movies}></MoviesGrid>
+            
+            {(movies && movies.length > 0) && 
+                <MoviesGrid Movies={movies}></MoviesGrid>
+            }
+            
+            {(!movies || movies.length == 0)  &&
+                <div>No movies are available</div>
+            }
+
         </Fragment>
     );
 };

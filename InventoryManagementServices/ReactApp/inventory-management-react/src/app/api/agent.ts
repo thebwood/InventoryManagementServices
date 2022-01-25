@@ -7,7 +7,7 @@ import { Movie, MovieFormValues } from '../models/movie';
 import { PaginatedResult } from '../models/pagination';
 
 
-const navigate = useNavigate();
+//const navigate = useNavigate();
 const sleep = (delay: number) => {
     return new Promise((resolve) => {
         setTimeout(resolve, delay)
@@ -15,43 +15,43 @@ const sleep = (delay: number) => {
 }
 
 // need to implement an API Gateway
-// axios.defaults.baseURL = process.env.GAME_API_URL
+axios.defaults.baseURL = process.env.GAME_API_URL
 
 
-axios.interceptors.response.use(async response => {
-    if (process.env.NODE_ENV === 'development') await sleep(1000);
-    const pagination = response.headers['pagination'];
-    if (pagination) {
-        response.data = new PaginatedResult(response.data, JSON.parse(pagination));
-        return response as AxiosResponse<PaginatedResult<any>>
-    }
-    return response;
-}, (error: AxiosError) => {
-    const { data, status, config, headers } = error.response!;
-    switch (status) {
-        case 400:
-            if (config.method === 'get' && data.errors.hasOwnProperty('id')) {
-                navigate('/not-found');
-            }
-            if (data.errors) {
-                const modalStateErrors = [];
-                for (const key in data.errors) {
-                    if (data.errors[key]) {
-                        modalStateErrors.push(data.errors[key])
-                    }
-                }
-                throw modalStateErrors.flat();
-            }
-            break;
-        case 404:
-            navigate('/not-found');
-            break;
-        case 500:
-            navigate('/server-error');
-            break;
-    }
-    return Promise.reject(error);
-})
+// axios.interceptors.response.use(async response => {
+//     if (process.env.NODE_ENV === 'development') await sleep(1000);
+//     const pagination = response.headers['pagination'];
+//     if (pagination) {
+//         response.data = new PaginatedResult(response.data, JSON.parse(pagination));
+//         return response as AxiosResponse<PaginatedResult<any>>
+//     }
+//     return response;
+// }, (error: AxiosError) => {
+//     const { data, status, config, headers } = error.response!;
+//     switch (status) {
+//         case 400:
+//             if (config.method === 'get' && data.errors.hasOwnProperty('id')) {
+//                 navigate('/not-found');
+//             }
+//             if (data.errors) {
+//                 const modalStateErrors = [];
+//                 for (const key in data.errors) {
+//                     if (data.errors[key]) {
+//                         modalStateErrors.push(data.errors[key])
+//                     }
+//                 }
+//                 throw modalStateErrors.flat();
+//             }
+//             break;
+//         case 404:
+//             navigate('/not-found');
+//             break;
+//         case 500:
+//             navigate('/server-error');
+//             break;
+//     }
+//     return Promise.reject(error);
+// })
 
 const responseBody = <T>(response: AxiosResponse<T>) => response.data;
 
@@ -76,40 +76,33 @@ const requests = {
 
 const Games = {
     search: (params: GameSearch)=> {
-        axios.defaults.baseURL = process.env.GAME_API_URL;
-        axios.post<GameSearchResults[]>('/games', params)
+        axios.post<GameSearchResults[]>('http://localhost:5109/api/games', params)
             .then(responseBody);
     },
 
     list: () => {
-        axios.defaults.baseURL = process.env.GAME_API_URL;
-        return axios.get<Game[]>('/games')
+        return axios.get<Game[]>('http://localhost:5109/api/games')
             .then(responseBody)
     },
     details: (id: string) => {
-        axios.defaults.baseURL = process.env.GAME_API_URL;
-        return requests.get<Game>(`/games/${id}`);
+        return requests.get<Game>('http://localhost:5109/api/games/${id}');
     },
     save: (game: GameFormValues) => {
-        axios.defaults.baseURL = process.env.GAME_API_URL;
-        return requests.post<void>('/games', game);
+        return requests.post<void>('http://localhost:5109/api/games', game);
     }
 }
 
 
 const Movies = {
     list: () => {
-        axios.defaults.baseURL = process.env.MOVIE_API_URL;
-        return axios.get<Movie[]>('/movies')
+        return axios.get<Movie[]>('http://localhost:5091/api/movies')
             .then(responseBody)
     },
     details: (id: string) => {
-        axios.defaults.baseURL = process.env.MOVIE_API_URL;
-        return requests.get<Movie>(`/movies/${id}`);
+        return requests.get<Movie>('http://localhost:5091/apimovies/${id}');
     },
     save: (movie: MovieFormValues) => {
-        axios.defaults.baseURL = process.env.MOVIE_API_URL;
-        return requests.post<void>('/movies', movie);
+        return requests.post<void>('http://localhost:5091/api/movies', movie);
     }
 
 }

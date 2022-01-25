@@ -1,7 +1,7 @@
 export interface Game{
-    id: string;
-    title: string;
-    description: string;
+    id?: string;
+    title?: string;
+    description?: string;
 }
 
 export class Game implements Game {

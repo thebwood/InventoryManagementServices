@@ -6,7 +6,7 @@ import GamesGrid from "./components/gamesGrid";
 
 const Games = () => {
     const {gameService} = useService();
-    const { loadGames} = gameService;
+    const {games, loadGames} = gameService;
 
     useEffect(() => {
         loadGames();
@@ -16,7 +16,7 @@ const Games = () => {
     return (
         <Fragment>
             <h1>Games</h1>
-            <GamesGrid Games={gameService.games}></GamesGrid>
+            <GamesGrid Games={games}></GamesGrid>
         </Fragment>
     );
 };
