@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import GameService from "./GameService";
+import GameService from "./gameService";
 import MovieService from "./movieService";
 
 interface Services {
