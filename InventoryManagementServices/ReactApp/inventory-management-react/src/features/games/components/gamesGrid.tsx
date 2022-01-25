@@ -29,11 +29,6 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   }));
   
 const GamesGrid: React.FC<ChildProps> = (props) => {
-    const [page, setPage] = React.useState(0);
-    const [rowsPerPage, setRowsPerPage] = React.useState(10);
-
-
-
     return(
         <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
