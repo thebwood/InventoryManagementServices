@@ -4,16 +4,16 @@ import { useService } from "../../app/services/services";
 import GamesGrid from "./components/gamesGrid";
 
 
-const Games = () => {
-    const [gameslist, setGamesList] = useState<Game[]>([]);
+const Games: React.FC = () => {
+    const [games, setGames] = useState<Game[]>([]);
 
     const {gameService} = useService();
     const {loadGames} = gameService;
 
     useEffect(() => {
-        loadGames().then(games =>{
-            if(games)
-                setGamesList(games);
+        loadGames().then(gamesList =>{
+            if(gamesList)
+                setGames(gamesList);
         });
     }, [loadGames]); 
 
@@ -21,7 +21,7 @@ const Games = () => {
     return (
         <Fragment>
             <h1>Games</h1>
-            <GamesGrid Games={gameslist}></GamesGrid>
+            <GamesGrid Games={games}></GamesGrid>
         </Fragment>
     );
 };
