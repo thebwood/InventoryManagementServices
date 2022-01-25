@@ -198,13 +198,13 @@
       "mscorlib.dll": "sha256-+5VU+MYaTQMTlRe9QKobEjWZWv6I9teAGdNndWSBqWE=",
       "netstandard.dll": "sha256-E5RFhGIaDH5QM6BEbFUuHU8U9wP6N6jbo5MCttzLOCM=",
       "System.Private.CoreLib.dll": "sha256-9NtEbYixyog7vUmeYXyyqzfBXUYl8wxoVQ26Ji7sNRg=",
-      "InventoryManagement.dll": "sha256-9AnR1wEuZFfMB1EE2K33C8IRMjSBKaeEXE37jffXsq8="
+      "InventoryManagement.dll": "sha256-YAIzbT0BwWS\/IDmMB6Z5IQcRTySeP3ITj75KmsvZ2gY="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "InventoryManagement.pdb": "sha256-E6TZvZ2EzV58hwzCrKQj6gMzCMnMLCdC0Od3RCZl1SU="
+      "InventoryManagement.pdb": "sha256-HnlbpY9O8p+S+PIo9ICAkP7UFNG\/USLnk3Pu24cHr94="
     },
     "runtime": {
       "dotnet.6.0.1.zwn5pwjbfo.js": "sha256-awQsJ\/WxYhouHPuE+i3eJqjA4XClQlr2rD6nKvW80ww=",
