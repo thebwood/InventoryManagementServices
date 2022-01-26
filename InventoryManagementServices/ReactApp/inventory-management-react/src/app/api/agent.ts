@@ -85,7 +85,7 @@ const Games = {
             .then(responseBody)
     },
     details: (id: string) => {
-        return requests.get<Game>('http://localhost:5109/api/games/${id}');
+        return requests.get<Game>('http://localhost:5109/api/games/' + id);
     },
     save: (game: GameFormValues) => {
         return requests.post<void>('http://localhost:5109/api/games', game);
@@ -99,7 +99,7 @@ const Movies = {
             .then(responseBody)
     },
     details: (id: string) => {
-        return requests.get<Movie>('http://localhost:5091/apimovies/${id}');
+        return requests.get<Movie>('http://localhost:5091/api/movies/' + id);
     },
     save: (movie: MovieFormValues) => {
         return requests.post<void>('http://localhost:5091/api/movies', movie);

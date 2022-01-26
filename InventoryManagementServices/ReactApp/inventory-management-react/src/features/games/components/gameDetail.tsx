@@ -1,4 +1,4 @@
-import { Paper, styled, Table, TableBody, TableContainer, TableHead, TableRow } from "@mui/material";
+import { TextField } from "@mui/material";
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import React, { Fragment } from "react";
 import { Game } from "../../../app/models/game";
@@ -17,7 +17,28 @@ const GameDetail: React.FC<ChildProps> = (props) => {
 
     return(
         <Fragment>
-            <div>
+            <div className="col-12">
+                <div className="col-md-6">
+                    <TextField 
+                        id="Title"
+                        label="Title"
+                        value={Game.title || ''}
+                        inputProps={{
+                            maxLength: 50
+                        }}
+                        ></TextField>
+
+                </div>
+                <div className="col-md-6">
+                    <TextField 
+                            id="Description"
+                            label="Description"
+                            value={Game.description || ''}
+                            inputProps={{
+                                maxLength: 50
+                            }}
+                            ></TextField>
+                </div>
 
             </div>
         </Fragment>
