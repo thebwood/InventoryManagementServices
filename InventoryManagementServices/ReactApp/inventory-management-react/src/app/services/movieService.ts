@@ -11,4 +11,12 @@ export default class MovieService {
         }
     }
 
+    loadMovie = async (id: string) => {
+        try {
+            return await agent.Movies.details(id);
+        } 
+        catch (error) {
+            console.log(error);
+        }
+    }
 }

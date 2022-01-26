@@ -2,7 +2,11 @@ export const REACT_ROUTES = {
     HOME: '/',
     DASHBOARD: '/dashboard',
     GAMES: '/games',
-    GAME: '/games/:id',
+    GAMESEARCH: '/games/search',
+    EDITGAME: '/games/:id',
+    ADDGAME: '/games/add',
     MOVIES: '/movies',
-    MOVIE: '/movies/:id'
+    MOVIESEARCH: '/movies/search',
+    EDITMOVIE: '/movies/:id',
+    ADDMOVIE: '/movies/add'
 };

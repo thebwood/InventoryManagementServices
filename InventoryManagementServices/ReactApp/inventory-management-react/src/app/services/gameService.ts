@@ -11,5 +11,12 @@ export default class GameService {
             console.log(error);
         }
     }
-
+    loadGame = async (id: string) => {
+        try {
+            return await agent.Games.details(id);
+        } 
+        catch (error) {
+            console.log(error);
+        }
+    }
 }
