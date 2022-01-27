@@ -1,0 +1,73 @@
+import { Paper, TextField } from '@mui/material';
+import React, { Fragment, useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { Movie } from '../../../app/models/movie';
+import { useService } from '../../../app/services/services';
+
+
+const MovieDetail: React.FC = () => {
+  const { id } = useParams();
+  const { movieService } = useService();
+  const { loadMovie } = movieService;
+
+  const [movie, setMovie] = useState<Movie>(new Movie());
+  const {title, description} = movie;
+  useEffect(() => {
+    if (id) {
+      loadMovie(id).then(movieDetail => {
+        if (movieDetail)
+          setMovie(movieDetail);
+      });
+    }
+  }, [loadMovie]);
+
+  return (
+    <Fragment>
+            {id && <h1>Movie: {id}</h1>}
+            {!id && <h1>Add Movie</h1>}
+
+      <Paper>
+        {
+          movie &&
+          <div>
+            <div className="col-12">
+              <div className="col-6">
+                <TextField
+                  id="Title"
+                  label="Title"
+                  value={title || ''}
+                  inputProps={{
+                    maxLength: 50
+                  }}
+                  onChange={(e) => setMovie({...movie, title: e.target.value})}
+                ></TextField>
+
+              </div>
+
+
+            </div>
+            <div>
+              <div className="col-6">
+                <TextField
+                  id="Description"
+                  label="Description"
+                  value={description || ''}
+                  inputProps={{
+                    maxLength: 200
+                  }}
+                  onChange={(e) => setMovie({...movie, description: e.target.value})}
+                  ></TextField>
+              </div>
+            </div>
+          </div>
+        }
+
+      </Paper>
+
+    </Fragment>
+  );
+
+};
+
+
+export default MovieDetail;

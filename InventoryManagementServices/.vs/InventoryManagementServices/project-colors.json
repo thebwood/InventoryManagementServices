@@ -45,7 +45,17 @@
       "ProjectGuid": "e522b1c0-fb65-4d7f-a404-ec59cca2b796",
       "DisplayName": "Person.API",
       "ColorIndex": 7
+    },
+    "c282046e-2cad-4bc3-a400-9b072577de88": {
+      "ProjectGuid": "c282046e-2cad-4bc3-a400-9b072577de88",
+      "DisplayName": "Person.API",
+      "ColorIndex": 8
+    },
+    "89a5cfbf-aa5a-4417-b172-0abc7f183eac": {
+      "ProjectGuid": "89a5cfbf-aa5a-4417-b172-0abc7f183eac",
+      "DisplayName": "IdentityAndSecurity.API",
+      "ColorIndex": 9
     }
   },
-  "NextColorIndex": 8
+  "NextColorIndex": 10
 }
