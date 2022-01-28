@@ -5,13 +5,14 @@ import { Movie } from '../../../app/models/movie';
 import { useService } from '../../../app/services/services';
 
 
+
 const MovieDetail: React.FC = () => {
   const { id } = useParams();
   const { movieService } = useService();
   const { loadMovie } = movieService;
 
   const [movie, setMovie] = useState<Movie>(new Movie());
-  const {title, description} = movie;
+  const { title, description } = movie;
   useEffect(() => {
     if (id) {
       loadMovie(id).then(movieDetail => {
@@ -23,14 +24,14 @@ const MovieDetail: React.FC = () => {
 
   return (
     <Fragment>
-            {id && <h1>Movie: {id}</h1>}
-            {!id && <h1>Add Movie</h1>}
+      {id && <h1>Movie: {id}</h1>}
+      {!id && <h1>Add Movie</h1>}
 
       <Paper>
         {
           movie &&
-          <div>
-            <div className="col-12">
+          <div className="container">
+            <div className="row">
               <div className="col-6">
                 <TextField
                   id="Title"
@@ -39,15 +40,15 @@ const MovieDetail: React.FC = () => {
                   inputProps={{
                     maxLength: 50
                   }}
-                  onChange={(e) => setMovie({...movie, title: e.target.value})}
+                  onChange={(e) => setMovie({ ...movie, title: e.target.value })}
                 ></TextField>
 
               </div>
 
 
             </div>
-            <div>
-              <div className="col-6">
+            <div className="row">
+              <div className="col-12">
                 <TextField
                   id="Description"
                   label="Description"
@@ -55,8 +56,8 @@ const MovieDetail: React.FC = () => {
                   inputProps={{
                     maxLength: 200
                   }}
-                  onChange={(e) => setMovie({...movie, description: e.target.value})}
-                  ></TextField>
+                  onChange={(e) => setMovie({ ...movie, description: e.target.value })}
+                ></TextField>
               </div>
             </div>
           </div>
