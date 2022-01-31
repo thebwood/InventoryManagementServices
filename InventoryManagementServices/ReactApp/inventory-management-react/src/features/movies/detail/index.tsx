@@ -36,6 +36,7 @@ const MovieDetail: React.FC = () => {
                 <TextField
                   id="Title"
                   label="Title"
+                  fullWidth
                   value={title || ''}
                   inputProps={{
                     maxLength: 50
@@ -52,6 +53,7 @@ const MovieDetail: React.FC = () => {
                 <TextField
                   id="Description"
                   label="Description"
+                  fullWidth
                   value={description || ''}
                   inputProps={{
                     maxLength: 200

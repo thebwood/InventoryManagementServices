@@ -1,6 +1,5 @@
 import agent from "../api/agent";
-import { Game } from "../models/game";
-
+import { GameFormValues } from "../models/game";
 
 export default class GameService {
     loadGames = async () => {
@@ -14,6 +13,15 @@ export default class GameService {
     loadGame = async (id: string) => {
         try {
             return await agent.Games.details(id);
+        } 
+        catch (error) {
+            console.log(error);
+        }
+    }
+
+    saveGame = async (game: GameFormValues) => {
+        try {
+            await agent.Games.save(game);
         } 
         catch (error) {
             console.log(error);
