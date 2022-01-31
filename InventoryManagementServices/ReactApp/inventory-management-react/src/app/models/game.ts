@@ -2,6 +2,7 @@ export interface Game{
     id?: string;
     title?: string;
     description?: string;
+    gameRatingId?: string;
 }
 
 export class Game implements Game {
@@ -14,12 +15,14 @@ export class Game implements Game {
     id?: string = undefined;
     title: string = '';
     description: string = '';
+    gameRatingId?: string = undefined;
 
     constructor(game?: GameFormValues) {
       if (game) {
         this.id = game.id;
         this.title = game.title;
         this.description = game.description;
+        this.gameRatingId = game.gameRatingId;
       }
     }
   }

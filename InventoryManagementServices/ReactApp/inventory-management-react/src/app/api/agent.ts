@@ -1,6 +1,7 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Game, GameFormValues } from '../models/game';
+import { GameRatings } from '../models/gameRatings';
 import { GameSearch } from '../models/gameSearch';
 import { GameSearchResults } from '../models/gameSearchResults';
 import { Movie, MovieFormValues } from '../models/movie';
@@ -82,13 +83,19 @@ const Games = {
 
     list: () => {
         return axios.get<Game[]>('http://localhost:5109/api/games')
-            .then(responseBody)
+            .then(responseBody);
     },
     details: (id: string) => {
         return requests.get<Game>('http://localhost:5109/api/games/' + id);
     },
-    save: (game: GameFormValues) => {
-        return requests.post<void>('http://localhost:5109/api/games', game);
+
+    gameRatings: () =>{
+        return axios.get<GameRatings[]>('http://localhost:5109/api/games/ratings')
+            .then(responseBody);
+
+    },
+    save: (game: Game) => {
+        return requests.post<string[]>('http://localhost:5109/api/games', game);
     }
 }
 
