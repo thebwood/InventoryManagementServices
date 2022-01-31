@@ -46,7 +46,7 @@ const GamesGrid: React.FC<ChildProps> = (props) => {
 
   return (
     <Fragment>
-      <Button variant="outlined" startIcon={<AddIcon />} onClick={() => { handleAddClick(); }} color="success">
+      <Button className="mb-2" variant="outlined" startIcon={<AddIcon />} onClick={() => { handleAddClick(); }} color="success">
         Add
       </Button>
       <TableContainer component={Paper}>

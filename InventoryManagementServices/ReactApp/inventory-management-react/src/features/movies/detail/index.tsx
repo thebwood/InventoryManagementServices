@@ -24,9 +24,7 @@ const MovieDetail: React.FC = () => {
 
   return (
     <Fragment>
-      {id && <h1>Movie: {id}</h1>}
-      {!id && <h1>Add Movie</h1>}
-
+      {id ? <h3>Movie: {id}</h3> : <h3>Add Movie</h3>}
       <Paper>
         {
           movie &&

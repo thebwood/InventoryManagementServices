@@ -1,8 +1,7 @@
-import { Container, Paper, TextField, Button, Select, Alert } from '@mui/material';
-import { setgid } from 'process';
-import React, { Fragment, useEffect, useState } from 'react';
+import { Container, TextField, Button, Select, Alert, FormControl, InputLabel, MenuItem } from '@mui/material';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { Game, GameFormValues } from '../../../app/models/game';
+import { Game } from '../../../app/models/game';
 import { GameRatings } from '../../../app/models/gameRatings';
 import { useService } from '../../../app/services/services';
 
@@ -16,31 +15,33 @@ const GameDetail: React.FC = () => {
     const [game, setGame] = useState<Game>(new Game());
     const [gameRatings, setGameRatings] = useState<GameRatings[]>([]);
     const [errorMessages, setErrorMessages] = useState<string[]>([]);
-    const { title, description, gameRatingId } = game;
+    const { title, description, gameRatingsId } = game;
 
     useEffect(() => {
+        loadGameRatings().then(gameRatingsDetails => {
+            if (gameRatingsDetails)
+                setGameRatings(gameRatingsDetails);
+        });
+        
         if (id) {
             loadGame(id).then(gameDetail => {
                 if (gameDetail)
                     setGame(gameDetail);
             });
         }
-        loadGameRatings().then(gameRatingsDetails => {
-            if (gameRatingsDetails)
-                setGameRatings(gameRatingsDetails);
-        })
+
     }, [loadGame]);
 
 
     const handleSave = () => {
         setErrorMessages([]);
-        saveGame(game).then(errors =>{
-          if(errors && errors.length > 0){
-              setErrorMessages(errors);
-          }
-          else{
-            navigate("/games");
-          }
+        saveGame(game).then(errors => {
+            if (errors && errors.length > 0) {
+                setErrorMessages(errors);
+            }
+            else {
+                navigate("/games");
+            }
         })
 
     }
@@ -51,11 +52,11 @@ const GameDetail: React.FC = () => {
 
     return (
         <Container maxWidth="md">
-            {errorMessages.map(error => (
+
+            {(errorMessages && errorMessages.length > 0) && errorMessages.map(error => (
                 <Alert severity="error">{error}</Alert>
             ))}
-            {id && <h3>Game: {id}</h3>}
-            {!id && <h3>Add Game</h3>}
+            {id ? <h4>Game: {id}</h4> : <h4>Add Game</h4>}
             {
                 game &&
                 <div className="container">
@@ -71,6 +72,24 @@ const GameDetail: React.FC = () => {
                                 }}
                                 onChange={(e) => setGame({ ...game, title: e.target.value })}
                             ></TextField>
+
+                        </div>
+                        <div className="col-6">
+                            <FormControl fullWidth>
+                            <InputLabel>Game Rating</InputLabel>
+                            <Select
+                                id="GameRating"
+                        
+                                value={gameRatingsId || ""}
+                                onChange={(e) => setGame({ ...game, gameRatingsId: e.target.value })}>
+                                <MenuItem value="">Clear Selection</MenuItem>
+                                {gameRatings.map(rating => (
+                                    <MenuItem key={rating.id} value={rating.id}>
+                                        {rating.rating}
+                                    </MenuItem>
+                                ))}
+                            </Select>
+                        </FormControl>
 
                         </div>
 
@@ -91,24 +110,8 @@ const GameDetail: React.FC = () => {
                         </div>
                     </div>
                     <div className="row mb-2">
-                        <div className="col-6">
-                            <Select
-                                id="GameRating"
-                                label="Game Rating"
-                                value={gameRatingId}
-                                onChange={(e) => setGame({ ...game, gameRatingId: e.target.value ?? undefined })}>
-                                <option value={undefined} />
-                                {gameRatings.map(rating => (
-                                    <option key={rating.id} value={rating.id}>
-                                        {rating.rating}
-                                    </option>
-                                ))}
-                            </Select>
-                        </div>
-                    </div>
-                    <div className="row mb-2">
-                        <div className="col-12 float-right">
-                            <Button variant="contained" onClick={() => handleSave()}>Save</Button>
+                        <div className="col-12 text-right">
+                            <Button className="mr-1" variant="contained" onClick={() => handleSave()}>Save</Button>
                             <Button variant="contained" color="error" onClick={() => handleCancel()}>Cancel</Button>
                         </div>
                     </div>

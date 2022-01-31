@@ -1,9 +1,9 @@
 export interface GameSearch
 {
-    title: string;
-    description: string;
-    releaseYear: string;
-    gameRatingsId: string;
+    title?: string;
+    description?: string;
+    releaseYear?: string;
+    gameRatingsId?: string;
     gameTypeIds?: [];
 }
 

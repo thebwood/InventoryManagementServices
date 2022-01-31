@@ -8,9 +8,9 @@
 			"isBackground": true,
 			"group": "build",
 			"args": [
-				"run", 
-				"--project", 
-				"D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Services\\Game\\Game.API\\Game.API.csproj", 
+				"run",
+				"--project",
+				"D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Services\\Game\\Game.API\\Game.API.csproj",
 				"--urls=http://localhost:5109"
 			],
 			"presentation": {
@@ -28,9 +28,9 @@
 			"isBackground": true,
 			"group": "build",
 			"args": [
-				"run", 
-				"--project", 
-				"D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Services\\Movie\\Movie.API\\Movie.API.csproj", 
+				"run",
+				"--project",
+				"D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Services\\Movie\\Movie.API\\Movie.API.csproj",
 				"--urls=http://localhost:5091"
 			],
 			"presentation": {
@@ -47,7 +47,8 @@
 				"Movie API",
 				"Game API"
 			],
-			"detail": "Runs all APIs"
+			"detail": "Runs all APIs",
+			"problemMatcher": []
 		},
 		{
 			"label": "Terminate All Tasks",

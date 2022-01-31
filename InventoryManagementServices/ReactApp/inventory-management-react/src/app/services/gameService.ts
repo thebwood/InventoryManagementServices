@@ -1,7 +1,17 @@
 import agent from "../api/agent";
 import { Game } from "../models/game";
+import { GameSearch } from "../models/gameSearch";
 
 export default class GameService {
+    searhGames = async (GameeSearchFields: GameSearch) => {
+        try {
+            return await agent.Games.search(GameeSearchFields);
+        } 
+        catch (error) {
+            console.log(error);
+        }
+
+    }
     loadGames = async () => {
         try {
             return await agent.Games.list();
