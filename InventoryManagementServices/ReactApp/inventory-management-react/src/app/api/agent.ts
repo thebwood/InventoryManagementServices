@@ -121,7 +121,7 @@ const Movies = {
 
     },
     save: (movie: MovieFormValues) => {
-        return requests.post<void>('http://localhost:5091/api/movies', movie);
+        return requests.post<string[]>('http://localhost:5091/api/movies', movie);
     }
 
 }

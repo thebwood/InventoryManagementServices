@@ -3,6 +3,7 @@ export interface Movie{
     title: string;
     date: Date | null;
     description: string;
+    movieRatingsId: string;
     category: string;
 }
 
@@ -18,6 +19,7 @@ export class Movie implements Movie {
     category: string = '';
     description: string = '';
     date: Date | null = null;
+    movieRatingsId: string = '';
 
     constructor(movie?: MovieFormValues) {
       if (movie) {
@@ -26,6 +28,7 @@ export class Movie implements Movie {
         this.category = movie.category;
         this.description = movie.description;
         this.date = movie.date;
+        this.movieRatingsId = movie.movieRatingsId;
       }
     }
   }
