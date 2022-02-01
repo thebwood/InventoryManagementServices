@@ -5,6 +5,9 @@ import { GameRatings } from '../models/gameRatings';
 import { GameSearch } from '../models/gameSearch';
 import { GameSearchResults } from '../models/gameSearchResults';
 import { Movie, MovieFormValues } from '../models/movie';
+import { MovieRatings } from '../models/movieRatings';
+import { MovieSearch } from '../models/movieSearch';
+import { MovieSearchResults } from '../models/movieSearchResults';
 import { PaginatedResult } from '../models/pagination';
 
 
@@ -77,7 +80,7 @@ const requests = {
 
 const Games = {
     search: (params: GameSearch)=> {
-        axios.post<GameSearchResults[]>('http://localhost:5109/api/games', params)
+        return axios.post<GameSearchResults[]>('http://localhost:5109/api/games/search', params)
             .then(responseBody);
     },
 
@@ -101,12 +104,21 @@ const Games = {
 
 
 const Movies = {
+    search: (params: MovieSearch)=> {
+        return axios.post<MovieSearchResults[]>('http://localhost:5091/api/movies/search', params)
+            .then(responseBody);
+    },
     list: () => {
         return axios.get<Movie[]>('http://localhost:5091/api/movies')
             .then(responseBody)
     },
     details: (id: string) => {
         return requests.get<Movie>('http://localhost:5091/api/movies/' + id);
+    },
+    movieRatings: () =>{
+        return axios.get<MovieRatings[]>('http://localhost:5091/api/movies/ratings')
+            .then(responseBody);
+
     },
     save: (movie: MovieFormValues) => {
         return requests.post<void>('http://localhost:5091/api/movies', movie);

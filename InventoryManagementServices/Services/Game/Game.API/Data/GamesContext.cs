@@ -131,8 +131,6 @@ namespace Game.API.Data
                 entity.Property(e => e.GameId).HasColumnName("GameID");
 
                 entity.Property(e => e.GameTypesId).HasColumnName("GameTypesID");
-
-                entity.Property(e => e.ReleaseDate).HasColumnType("datetime");
             });
 
             OnModelCreatingPartial(modelBuilder);

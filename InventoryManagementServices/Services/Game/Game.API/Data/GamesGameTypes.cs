@@ -8,6 +8,5 @@ namespace Game.API.Data
         public Guid Id { get; set; }
         public Guid GameId { get; set; }
         public Guid GameTypesId { get; set; }
-        public DateTime? ReleaseDate { get; set; }
     }
 }

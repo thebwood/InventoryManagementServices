@@ -1,14 +1,14 @@
 import { Button, Paper, styled, Table, TableBody, TableContainer, TableHead, TableRow } from "@mui/material";
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import React, { Fragment } from "react";
-import { Movie } from "../../../app/models/movie";
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { useNavigate } from "react-router-dom";
+import { MovieSearchResults } from "../../../app/models/movieSearchResults";
 
 interface ChildProps {
-  Movies: Movie[]
+  Movies: MovieSearchResults[]
 }
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({

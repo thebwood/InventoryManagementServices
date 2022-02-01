@@ -11,7 +11,6 @@ namespace Movie.API.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime? ReleaseDate { get; set; }
-        public Guid MovieRatingsId { get; set; }
         public int? Hours { get; set; }
         public int? Minutes { get; set; }
         public decimal? BoxOffice { get; set; }

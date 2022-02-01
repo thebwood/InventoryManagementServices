@@ -1,14 +1,14 @@
 import { Button, Paper, styled, Table, TableBody, TableContainer, TableHead, TableRow } from "@mui/material";
 import TableCell, { tableCellClasses } from '@mui/material/TableCell';
 import React, { Fragment } from "react";
-import { Game } from "../../../app/models/game";
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import AddIcon from '@mui/icons-material/Add';
 import { useNavigate } from "react-router-dom";
+import { GameSearchResults } from "../../../app/models/gameSearchResults";
 
 interface ChildProps {
-  Games: Game[]
+  Games: GameSearchResults[]
 }
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -42,7 +42,16 @@ const GamesGrid: React.FC<ChildProps> = (props) => {
     navigate("/games/add");
   }
   if (!Games || Games.length == 0)
-    return (<div>No games were found!</div>);
+    return (
+      <Fragment>
+        <Button className="mb-2" variant="outlined" startIcon={<AddIcon />} onClick={() => { handleAddClick(); }} color="success">
+          Add
+        </Button>
+
+        <div>No games were found!</div>
+
+      </Fragment>
+    );
 
   return (
     <Fragment>

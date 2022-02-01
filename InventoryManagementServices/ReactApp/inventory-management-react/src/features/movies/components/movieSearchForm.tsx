@@ -1,17 +1,17 @@
 import { Button, Container, FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material";
 import React, { Fragment } from "react";
-import { GameRatings } from "../../../app/models/gameRatings";
-import { GameSearch } from "../../../app/models/gameSearch";
+import { MovieRatings } from "../../../app/models/movieRatings";
+import { MovieSearch } from "../../../app/models/movieSearch";
 
 interface ChildProps {
-    GameRatingsList: GameRatings[];
-    HandleSearch: (gameSearchFields: GameSearch) => void;
+    MovieRatingsList: MovieRatings[];
+    HandleSearch: (movieSearchFields: MovieSearch) => void;
 }
 
-const GameSearchForm: React.FC<ChildProps> = (props) => {
-    const [gameSearch, setGameSearch] = React.useState<GameSearch>({})
-    const { GameRatingsList, HandleSearch } = props;
-    const { title, gameRatingsId, description } = gameSearch;
+const MovieSearchForm: React.FC<ChildProps> = (props) => {
+    const [movieSearch, setMovieSearch] = React.useState<MovieSearch>({})
+    const { MovieRatingsList, HandleSearch } = props;
+    const { title, movieRatingsId, description } = movieSearch;
 
     return (
         <Container>
@@ -25,20 +25,20 @@ const GameSearchForm: React.FC<ChildProps> = (props) => {
                         inputProps={{
                             maxLength: 50
                         }}
-                        onChange={(e) => setGameSearch({ ...gameSearch, title: e.target.value })}
+                        onChange={(e) => setMovieSearch({ ...movieSearch, title: e.target.value })}
                     ></TextField>
 
                 </div>
                 <div className="col-6">
                     <FormControl fullWidth>
-                        <InputLabel>Game Rating</InputLabel>
+                        <InputLabel>Movie Rating</InputLabel>
                         <Select
-                            id="GameRating"
+                            id="MovieRating"
 
-                            value={gameRatingsId || undefined}
-                            onChange={(e) => setGameSearch({ ...gameSearch, gameRatingsId: e.target.value })}>
+                            value={movieRatingsId || undefined}
+                            onChange={(e) => setMovieSearch({ ...movieSearch, movieRatingsId: e.target.value })}>
                             <MenuItem value={undefined}>Clear Selection</MenuItem>
-                            {GameRatingsList.map(rating => (
+                            {MovieRatingsList.map(rating => (
                                 <MenuItem key={rating.id} value={rating.id}>
                                     {rating.rating}
                                 </MenuItem>
@@ -60,16 +60,16 @@ const GameSearchForm: React.FC<ChildProps> = (props) => {
                         inputProps={{
                             maxLength: 200
                         }}
-                        onChange={(e) => setGameSearch({ ...gameSearch, description: e.target.value })}
+                        onChange={(e) => setMovieSearch({ ...movieSearch, description: e.target.value })}
                     ></TextField>
                 </div>
             </div>
             <div className="row mb-2 text-right">
-                <Button className="mr-1" variant="contained" onClick={() => HandleSearch(gameSearch)}>Search</Button>
+                <Button className="mr-1" variant="contained" onClick={() => HandleSearch(movieSearch)}>Search</Button>
 
             </div>
         </Container>
     );
 }
 
-export default GameSearchForm;
+export default MovieSearchForm;

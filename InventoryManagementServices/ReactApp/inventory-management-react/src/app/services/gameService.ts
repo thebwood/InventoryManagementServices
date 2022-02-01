@@ -3,9 +3,9 @@ import { Game } from "../models/game";
 import { GameSearch } from "../models/gameSearch";
 
 export default class GameService {
-    searhGames = async (GameeSearchFields: GameSearch) => {
+    searchGames = async (GameSearchFields: GameSearch) => {
         try {
-            return await agent.Games.search(GameeSearchFields);
+            return await agent.Games.search(GameSearchFields);
         } 
         catch (error) {
             console.log(error);
