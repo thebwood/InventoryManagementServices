@@ -20,7 +20,10 @@ const Games: React.FC = () => {
                 setGameRatings(gameRatingsList);
         });
 
-        searchGames(new GameSearch());
+        searchGames(new GameSearch()).then(gamesList =>{
+            if(gamesList)
+                setGames(gamesList);
+        });
     }, [loadGameRatings, searchGames]); 
 
     const searchGamesList = (gameSearchFields: GameSearch) =>{

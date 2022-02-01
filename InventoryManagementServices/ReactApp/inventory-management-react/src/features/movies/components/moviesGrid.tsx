@@ -58,6 +58,9 @@ const MoviesGrid: React.FC<ChildProps> = (props) => {
               <StyledTableCell align="center">Edit</StyledTableCell>
               <StyledTableCell align="center">Title</StyledTableCell>
               <StyledTableCell align="center">Description</StyledTableCell>
+              <StyledTableCell align="center">Rating</StyledTableCell>
+              <StyledTableCell align="center">Hours</StyledTableCell>
+              <StyledTableCell align="center">Minutes</StyledTableCell>
               <StyledTableCell align="center">Delete</StyledTableCell>
             </TableRow>
           </TableHead>
@@ -69,8 +72,11 @@ const MoviesGrid: React.FC<ChildProps> = (props) => {
                     Edit
                   </Button>
                 </StyledTableCell>
-                <StyledTableCell align="right">{row.title}</StyledTableCell>
+                <StyledTableCell align="left">{row.title}</StyledTableCell>
                 <StyledTableCell align="right">{row.description}</StyledTableCell>
+                <StyledTableCell align="center">{row.movieRating}</StyledTableCell>
+                <StyledTableCell align="center">{row.hours}</StyledTableCell>
+                <StyledTableCell align="center">{row.minutes}</StyledTableCell>
                 <StyledTableCell align="center">
                   <Button variant="outlined" color="error" startIcon={<DeleteIcon />}>
                     Delete
