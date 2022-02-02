@@ -1,10 +1,12 @@
 export interface Movie{
     id: string;
     title: string;
-    date: Date | null;
     description: string;
+    releaseDate: string | null;
     movieRatingsId: string;
     category: string;
+    hours: string | null;
+    minutes: string | null;
 }
 
 export class Movie implements Movie {
@@ -18,8 +20,10 @@ export class Movie implements Movie {
     title: string = '';
     category: string = '';
     description: string = '';
-    date: Date | null = null;
+    releaseDate: string | null = null;
     movieRatingsId: string = '';
+    hours: string | null = null;
+    minutes: string | null = null;
 
     constructor(movie?: MovieFormValues) {
       if (movie) {
@@ -27,8 +31,10 @@ export class Movie implements Movie {
         this.title = movie.title;
         this.category = movie.category;
         this.description = movie.description;
-        this.date = movie.date;
+        this.releaseDate = movie.releaseDate;
         this.movieRatingsId = movie.movieRatingsId;
+        this.hours = movie.hours;
+        this.minutes = movie.minutes;
       }
     }
   }

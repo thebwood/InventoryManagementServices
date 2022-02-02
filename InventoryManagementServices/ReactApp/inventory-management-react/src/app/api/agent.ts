@@ -1,13 +1,13 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { Game, GameFormValues } from '../models/game';
-import { GameRatings } from '../models/gameRatings';
-import { GameSearch } from '../models/gameSearch';
-import { GameSearchResults } from '../models/gameSearchResults';
-import { Movie, MovieFormValues } from '../models/movie';
-import { MovieRatings } from '../models/movieRatings';
-import { MovieSearch } from '../models/movieSearch';
-import { MovieSearchResults } from '../models/movieSearchResults';
+import { Game, GameFormValues } from '../models/games/game';
+import { GameRatings } from '../models/games/gameRatings';
+import { GameSearch } from '../models/games/gameSearch';
+import { GameSearchResults } from '../models/games/gameSearchResults';
+import { Movie, MovieFormValues } from '../models/movies/movie';
+import { MovieRatings } from '../models/movies/movieRatings';
+import { MovieSearch } from '../models/movies/movieSearch';
+import { MovieSearchResults } from '../models/movies/movieSearchResults';
 import { PaginatedResult } from '../models/pagination';
 
 

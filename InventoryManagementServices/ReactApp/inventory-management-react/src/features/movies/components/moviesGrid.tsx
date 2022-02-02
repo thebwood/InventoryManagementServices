@@ -5,7 +5,7 @@ import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { useNavigate } from "react-router-dom";
-import { MovieSearchResults } from "../../../app/models/movieSearchResults";
+import { MovieSearchResults } from "../../../app/models/movies/movieSearchResults";
 
 interface ChildProps {
   Movies: MovieSearchResults[]
@@ -44,12 +44,20 @@ const MoviesGrid: React.FC<ChildProps> = (props) => {
   }
 
   if (!Movies || Movies.length == 0)
-    return (<div>No movies were found!</div>);
+    return (
+      <Fragment>
+        <Button className="mb-2" variant="outlined" startIcon={<AddIcon />} onClick={() => { handleAddClick(); }} color="success">
+          Add
+        </Button>
 
+        <div>No movies were found!</div>
+
+      </Fragment>
+    );
 
   return (
     <Fragment>
-      <Button variant="outlined" startIcon={<AddIcon />} onClick={() => { handleAddClick(); }} color="success">
+      <Button className="mb-2" variant="outlined" startIcon={<AddIcon />} onClick={() => { handleAddClick(); }} color="success">
         Add
       </Button>    <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">

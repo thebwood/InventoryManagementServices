@@ -1,7 +1,7 @@
 import { Button, Container, FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material";
 import React, { Fragment } from "react";
-import { GameRatings } from "../../../app/models/gameRatings";
-import { GameSearch } from "../../../app/models/gameSearch";
+import { GameRatings } from "../../../app/models/games/gameRatings";
+import { GameSearch } from "../../../app/models/games/gameSearch";
 
 interface ChildProps {
     GameRatingsList: GameRatings[];
@@ -65,8 +65,9 @@ const GameSearchForm: React.FC<ChildProps> = (props) => {
                 </div>
             </div>
             <div className="row mb-2 text-right">
-                <Button className="mr-1" variant="contained" onClick={() => HandleSearch(gameSearch)}>Search</Button>
-
+                <div className="col-12 text-right">
+                    <Button variant="contained" onClick={() => HandleSearch(gameSearch)}>Search</Button>
+                </div>
             </div>
         </Container>
     );

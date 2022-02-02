@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { Game } from "../../app/models/game";
-import { GameRatings } from "../../app/models/gameRatings";
-import { GameSearch } from "../../app/models/gameSearch";
-import { GameSearchResults } from "../../app/models/gameSearchResults";
+import { Game } from "../../app/models/games/game";
+import { GameRatings } from "../../app/models/games/gameRatings";
+import { GameSearch } from "../../app/models/games/gameSearch";
+import { GameSearchResults } from "../../app/models/games/gameSearchResults";
 import { useService } from "../../app/services/services";
 import GameSearchForm from "./components/gameSearchForm";
 import GamesGrid from "./components/gamesGrid";

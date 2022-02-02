@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { MovieRatings } from "../../app/models/movieRatings";
-import { MovieSearch } from "../../app/models/movieSearch";
-import { MovieSearchResults } from "../../app/models/movieSearchResults";
+import { MovieRatings } from "../../app/models/movies/movieRatings";
+import { MovieSearch } from "../../app/models/movies/movieSearch";
+import { MovieSearchResults } from "../../app/models/movies/movieSearchResults";
 import { useService } from "../../app/services/services";
 import MovieSearchForm from "./components/movieSearchForm";
 import MoviesGrid from "./components/moviesGrid";

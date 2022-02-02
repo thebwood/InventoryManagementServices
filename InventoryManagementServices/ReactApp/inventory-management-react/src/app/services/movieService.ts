@@ -1,6 +1,6 @@
 import agent from "../api/agent";
-import { Movie } from "../models/movie";
-import { MovieSearch } from "../models/movieSearch";
+import { Movie } from "../models/movies/movie";
+import { MovieSearch } from "../models/movies/movieSearch";
 
 export default class MovieService {
     searchMovies = async (MovieSearchFields: MovieSearch) => {

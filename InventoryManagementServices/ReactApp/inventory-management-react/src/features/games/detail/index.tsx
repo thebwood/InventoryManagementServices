@@ -1,8 +1,8 @@
 import { Container, TextField, Button, Select, Alert, FormControl, InputLabel, MenuItem } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { Game } from '../../../app/models/game';
-import { GameRatings } from '../../../app/models/gameRatings';
+import { Game } from '../../../app/models/games/game';
+import { GameRatings } from '../../../app/models/games/gameRatings';
 import { useService } from '../../../app/services/services';
 
 
@@ -110,7 +110,7 @@ const GameDetail: React.FC = () => {
                         </div>
                     </div>
                     <div className="row mb-2">
-                        <div className="col-12 text-right">
+                        <div className="col-12">
                             <Button className="mr-1" variant="contained" onClick={() => handleSave()}>Save</Button>
                             <Button variant="contained" color="error" onClick={() => handleCancel()}>Cancel</Button>
                         </div>

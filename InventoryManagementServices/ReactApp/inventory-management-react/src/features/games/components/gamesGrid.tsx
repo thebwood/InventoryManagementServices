@@ -5,7 +5,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import AddIcon from '@mui/icons-material/Add';
 import { useNavigate } from "react-router-dom";
-import { GameSearchResults } from "../../../app/models/gameSearchResults";
+import { GameSearchResults } from "../../../app/models/games/gameSearchResults";
 
 interface ChildProps {
   Games: GameSearchResults[]
