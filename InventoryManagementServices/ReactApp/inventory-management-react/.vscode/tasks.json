@@ -41,11 +41,34 @@
 				"instanceLimit": 1
 			}
 		},
+
+		{
+			"label": "RefData API",
+			"command": "dotnet",
+			"type": "process",
+			"isBackground": true,
+			"group": "build",
+			"args": [
+				"run",
+				"--project",
+				"D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Services\\RefData\\RefData.API\\RefData.API.csproj",
+				"--urls=http://localhost:5135"
+			],
+			"presentation": {
+				"reveal": "always"
+			},
+			"problemMatcher": "$msCompile",
+			"runOptions": {
+				"instanceLimit": 1
+			}
+		},
+		
 		{
 			"label": "Run all APIs",
 			"dependsOn": [
 				"Movie API",
-				"Game API"
+				"Game API",
+				"RefData API"
 			],
 			"detail": "Runs all APIs",
 			"problemMatcher": []

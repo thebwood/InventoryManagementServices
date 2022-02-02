@@ -43,7 +43,7 @@ namespace Game.API.Repositories
                          Description = g.Description,
                          GameRating = gr.Rating
                      })
-                    .OrderByDescending(a => a.Id)
+                    .OrderByDescending(a => a.Title)
                     .Take(1000)
                     .ToList();
 

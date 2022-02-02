@@ -54,7 +54,7 @@ namespace Movie.API.Repositories
                          MovieRating = mr.Rating,
                          BoxOffice = m.BoxOffice
                      })
-                    .OrderByDescending(a => a.Id)
+                    .OrderBy(a => a.Title)
                     .Take(1000)
                     .ToList();
 

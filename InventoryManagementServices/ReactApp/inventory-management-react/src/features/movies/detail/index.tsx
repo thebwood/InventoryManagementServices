@@ -136,7 +136,7 @@ const MovieDetail: React.FC = () => {
                 id="ReleaseDate"
                 label="Release Date"
                 type="date"
-                value={moment(releaseDate).format("YYYY-MM-DD")}
+                value={releaseDate ? moment(releaseDate).format("YYYY-MM-DD") : ""}
                 fullWidth
                 onChange={(e) => setMovie({ ...movie, releaseDate: e.target.value })}
                 InputLabelProps={{
