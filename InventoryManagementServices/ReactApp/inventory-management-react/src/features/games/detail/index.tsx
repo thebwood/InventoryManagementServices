@@ -111,6 +111,11 @@ const GameDetail: React.FC = () => {
                     </div>
                     <div className="row mb-2">
                         <div className="col-12">
+                            
+                        </div>
+                    </div>
+                    <div className="row mb-2">
+                        <div className="col-12 text-right">
                             <Button className="mr-1" variant="contained" onClick={() => handleSave()}>Save</Button>
                             <Button variant="contained" color="error" onClick={() => handleCancel()}>Cancel</Button>
                         </div>
