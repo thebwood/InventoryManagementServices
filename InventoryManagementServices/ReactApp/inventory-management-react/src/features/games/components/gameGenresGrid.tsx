@@ -34,30 +34,20 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 const GameGenresGrid: React.FC<ChildProps> = (props) => {
   const navigate = useNavigate();
   const { GameGenres } = props;
-  const handleEditClick = (rowId: string | undefined) => {
-    if (rowId)
-      navigate("/games/" + rowId);
-  }
+
+
   const handleAddClick = () => {
     navigate("/games/add");
   }
   if (!GameGenres || GameGenres.length == 0)
     return (
       <Fragment>
-        <Button className="mb-2" variant="outlined" startIcon={<AddIcon />} onClick={() => { handleAddClick(); }} color="success">
-          Add
-        </Button>
-
-        <div>No games were found!</div>
-
+        <div>No genres were found!</div>
       </Fragment>
     );
 
   return (
     <Fragment>
-      <Button className="mb-2" variant="outlined" startIcon={<AddIcon />} onClick={() => { handleAddClick(); }} color="success">
-        Add
-      </Button>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>

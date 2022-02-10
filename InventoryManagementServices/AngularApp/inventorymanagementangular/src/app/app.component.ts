@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  text: string = '';
+  translate: string = '';
+
   title = 'inventorymanagementangular';
+  
 }
