@@ -11,7 +11,7 @@ namespace IdentityAndSecurity.API.Data
         public string LastName { get; set; }
         public byte[] PasswordSalt { get; set; }
         public byte[] PasswordHash { get; set; }
-        public DateTime? CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
         public Guid CreatedBy { get; set; }
     }
 }
