@@ -1,0 +1,22 @@
+<div>
+    <div class="row mb-2">
+        <div>
+            Games
+        </div>
+    </div>
+    <div class="row mb-2">
+        <table>
+            <tr>
+                <th>Edit</th>
+                <th>Title</th>
+                <th>Description</th>
+            </tr>
+            <tr *ngFor="let game of games">
+                <td>{{game.id}}</td>
+                <td>{{game.title}}</td>
+                <td>{{game.description}}</td>
+
+            </tr>
+        </table>
+    </div>
+</div>

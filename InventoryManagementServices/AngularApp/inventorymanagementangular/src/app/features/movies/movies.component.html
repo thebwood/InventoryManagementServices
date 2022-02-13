@@ -1,0 +1,28 @@
+<div>
+    <div class="row mb-2">
+        <div>
+            Movies
+        </div>
+    </div>
+    <div class="row mb-2">
+        <table>
+            <tr>
+                <th>Edit</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Rating</th>
+                <th>Hours</th>
+                <th>Minutes</th>
+            </tr>
+            <tr *ngFor="let movie of movies">
+                <td>{{movie.id}}</td>
+                <td>{{movie.title}}</td>
+                <td>{{movie.description}}</td>
+                <td>{{movie.movieRating}}</td>
+                <td>{{movie.hours}}</td>
+                <td>{{movie.minutes}}</td>
+
+            </tr>
+        </table>
+    </div>
+</div>

@@ -59,7 +59,8 @@ const MoviesGrid: React.FC<ChildProps> = (props) => {
     <Fragment>
       <Button className="mb-2" variant="outlined" startIcon={<AddIcon />} onClick={() => { handleAddClick(); }} color="success">
         Add
-      </Button>    <TableContainer component={Paper}>
+      </Button>    
+      <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
           <TableHead>
             <TableRow>

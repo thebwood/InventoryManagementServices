@@ -1,8 +1,34 @@
+using Microsoft.EntityFrameworkCore;
+using Person.API.Data;
+using Person.API.Repositories;
+using Person.API.Repositories.Interfaces;
+using Person.API.Services;
+using Person.API.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
+var siteCorsPolicy = "SiteCorsPolicy";
+
 // Add services to the container.
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: siteCorsPolicy,
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:5253", "http://localhost:3000", "http://localhost:4200")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials();
+        });
+});
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<IPeopleRepository, PeopleRepository>();
+builder.Services.AddScoped<IPeopleService, PeopleService>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+var connectionString = builder.Configuration["People"];
+builder.Services.AddDbContext<PeopleContext>(options => options.UseSqlServer(connectionString));
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -16,6 +42,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors(siteCorsPolicy);
 app.UseAuthorization();
 
 app.MapControllers();
