@@ -11,12 +11,14 @@
                 <th>Title</th>
                 <th>Description</th>
             </tr>
-            <tr *ngFor="let game of games">
-                <td>{{game.id}}</td>
-                <td>{{game.title}}</td>
-                <td>{{game.description}}</td>
+            <tbody>
+                <tr *ngFor="let game of games">
+                    <td>{{game.id}}</td>
+                    <td>{{game.title}}</td>
+                    <td>{{game.description}}</td>
 
-            </tr>
+                </tr>
+            </tbody>
         </table>
     </div>
 </div>

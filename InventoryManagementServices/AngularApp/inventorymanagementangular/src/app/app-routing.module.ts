@@ -6,10 +6,10 @@ import { MoviesComponent } from './features/movies/movies.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent},
   { path: 'home', component: HomeComponent} ,
-  { path: 'games', component: GamesComponent} ,
-  { path: 'movies', component: MoviesComponent }
+  { path: 'games', component: GamesComponent, loadChildren: () => import('./features/games/games.module').then(mod => mod.GamesModule) } ,
+  { path: 'movies', component: MoviesComponent, loadChildren: () => import('./features/movies/movies.module').then(mod => mod.MoviesModule) }
 
 ];
 

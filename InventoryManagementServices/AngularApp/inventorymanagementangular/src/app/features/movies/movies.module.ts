@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { MovieDetailComponent } from './detail/movie-detail.component';
 import { MoviesComponent } from './movies.component';
 import { MoviesRoutingModule } from './movies-routing.module';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,8 +11,6 @@ import { FormsModule } from '@angular/forms';
   declarations: [MoviesComponent, MovieDetailComponent],
   imports: [
     CommonModule,
-    BrowserModule,
-    FormsModule,
     MoviesRoutingModule
   ]
 })

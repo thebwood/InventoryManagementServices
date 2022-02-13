@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     NgxSpinnerModule
