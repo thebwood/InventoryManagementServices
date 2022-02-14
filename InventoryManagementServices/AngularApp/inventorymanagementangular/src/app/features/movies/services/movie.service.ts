@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { IMovieModel } from '../models/movie/movie-model';
 import { IMovieGridModel } from '../models/movieGrid/movie-grid-model';
 import { MovieSearchFormModel } from '../models/movieSearchForm/movie-search-form-model';
 
@@ -16,4 +17,7 @@ export class MovieService {
     return this.http.post<IMovieGridModel[]>(this.baseUrl + 'search', movieSearch);
   }
 
+  getMovie(id: String) {
+    return this.http.get<IMovieModel>(this.baseUrl + id);
+  }
 }

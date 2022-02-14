@@ -1,1 +1,5 @@
-<p>game-detail works!</p>
+<div *ngIf="game">
+    <h3>Game: {{game.id}}</h3>
+    <div>{{game.title}}</div>
+    <div>{{game.description}}</div>
+</div>

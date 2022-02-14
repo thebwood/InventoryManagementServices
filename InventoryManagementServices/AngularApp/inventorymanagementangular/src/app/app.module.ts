@@ -8,6 +8,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { NavBarComponent } from './components/navBar/nav-bar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { HomeModule } from './features/home/home.module';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    HomeModule,
     NgxSpinnerModule
   ],
   providers: [],

@@ -12,6 +12,7 @@ import { MoviesRoutingModule } from './movies-routing.module';
   imports: [
     CommonModule,
     MoviesRoutingModule
-  ]
+  ],
+  exports: [MoviesComponent]
 })
 export class MoviesModule { }

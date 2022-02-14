@@ -13,10 +13,9 @@
             </tr>
             <tbody>
                 <tr *ngFor="let game of games">
-                    <td>{{game.id}}</td>
+                    <td><a class="p-2 text-dark" [routerLink]="['/games', game.id]">Edit</a></td>
                     <td>{{game.title}}</td>
                     <td>{{game.description}}</td>
-
                 </tr>
             </tbody>
         </table>

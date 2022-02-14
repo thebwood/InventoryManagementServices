@@ -16,7 +16,7 @@
             </tr>
             <tbody>
                 <tr *ngFor="let movie of movies">
-                    <td>{{movie.id}}</td>
+                    <td><a class="p-2 text-dark" [routerLink]="['/movies', movie.id]">Edit</a></td>
                     <td>{{movie.title}}</td>
                     <td>{{movie.description}}</td>
                     <td>{{movie.movieRating}}</td>
