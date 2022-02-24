@@ -10,6 +10,6 @@ namespace IdentityAndSecurity.API.Data
         public Guid RoleId { get; set; }
         public bool IsDeleted { get; set; }
         public DateTime CreateAt { get; set; }
-        public Guid CreatedBy { get; set; }
+        public string CreatedBy { get; set; }
     }
 }

@@ -19,40 +19,49 @@ namespace IdentityAndSecurity.API.Services
             _respository = respository;
         }
 
-        public UserRegistrationModel Register(UserModel userRequest)
+        public UserRegisterResponseModel Register(UserRegisterModel request)
         {
-            var registration = new UserRegistrationModel();
+            var registration = new UserRegisterResponseModel();
             var user = new User();
 
-            CreatePasswordHash(userRequest.Password, out byte[] passwordHash, out byte[] passwordSalt);
-            user.UserName = userRequest.UserName;
+            CreatePasswordHash(request.Password, out byte[] passwordHash, out byte[] passwordSalt);
+            user.UserName = request.UserName;
+            user.FirstName = request.FirstName;
+            user.LastName = request.LastName;
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
+            user.Email = request.Email;
+            user.CreatedAt = DateTime.Now;
+            user.CreatedBy = "system";
+            user.IsDeleted = false;
+            _respository.Register(user);
             return registration;
         }
 
-        public UserLoginModel Login(UserModel request)
+        public UserLoginResponseModel Login(UserLoginModel request)
         {
-            var userToken = new UserLoginModel();
-            var user = new User();
-            if (user.UserName != request.UserName)
+            var response = new UserLoginResponseModel();
+            var user = _respository.FindUser(request);
+            if (user == null || user.UserName != request.UserName)
             {
-                userToken.ErrorMessages.Add("User not found.");
+                response.ErrorMessages.Add("User not found.");
+                return response;
             }
-            user.UserName = request.UserName;
 
             if (!VerifyPasswordHash(request.Password, user.PasswordHash, user.PasswordSalt))
             {
-                userToken.ErrorMessages.Add("Password is incorrect");
+                response.ErrorMessages.Add("Password is incorrect");
+                return response;
             }
 
-            if(userToken.ErrorMessages.Count > 0)
-            {
-                return userToken;
-            }
+            var token = CreateToken(user);
+            var userLogin = _respository.FindUserLogin(user);
+            userLogin.Token = token;
+            userLogin.LoginAt = DateTime.Now;
+            _respository.SaveUserLogin(userLogin);
 
-            string token = CreateToken(user);
-            return userToken;
+            response.UserID = user.Id;
+            return response;
         }
 
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
@@ -91,6 +100,5 @@ namespace IdentityAndSecurity.API.Services
             var jwt = new JwtSecurityTokenHandler().WriteToken(token);
             return jwt;
         }
-
     }
 }

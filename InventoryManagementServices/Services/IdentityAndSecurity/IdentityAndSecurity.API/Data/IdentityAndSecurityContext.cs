@@ -32,11 +32,15 @@ namespace IdentityAndSecurity.API.Data
 
                 entity.Property(e => e.CreateAt).HasColumnType("datetime");
 
-                entity.Property(e => e.Role1)
+                entity.Property(e => e.CreatedBy)
                     .IsRequired()
                     .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("Role");
+                    .IsUnicode(false);
+
+                entity.Property(e => e.RoleName)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<RolePermission>(entity =>
@@ -46,6 +50,11 @@ namespace IdentityAndSecurity.API.Data
                     .HasDefaultValueSql("(newid())");
 
                 entity.Property(e => e.CreateAt).HasColumnType("datetime");
+
+                entity.Property(e => e.CreatedBy)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Permission)
                     .IsRequired()
@@ -62,6 +71,16 @@ namespace IdentityAndSecurity.API.Data
                     .HasDefaultValueSql("(newid())");
 
                 entity.Property(e => e.CreatedAt).HasColumnType("datetime");
+
+                entity.Property(e => e.CreatedBy)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Email)
+                    .IsRequired()
+                    .HasMaxLength(200)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.FirstName)
                     .IsRequired()
@@ -98,7 +117,7 @@ namespace IdentityAndSecurity.API.Data
                 entity.Property(e => e.LoginAt).HasColumnType("datetime");
 
                 entity.Property(e => e.Token)
-                    .HasMaxLength(100)
+                    .HasMaxLength(500)
                     .IsUnicode(false);
 
                 entity.Property(e => e.UserId).HasColumnName("UserID");
@@ -111,6 +130,11 @@ namespace IdentityAndSecurity.API.Data
                     .HasDefaultValueSql("(newid())");
 
                 entity.Property(e => e.CreateAt).HasColumnType("datetime");
+
+                entity.Property(e => e.CreatedBy)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.RoleId).HasColumnName("RoleID");
 

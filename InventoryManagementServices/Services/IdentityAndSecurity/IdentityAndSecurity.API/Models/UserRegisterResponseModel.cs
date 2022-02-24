@@ -1,6 +1,6 @@
 ﻿namespace IdentityAndSecurity.API.Models
 {
-    public class UserRegistrationModel
+    public class UserRegisterResponseModel
     {
         public List<string> ErrorMessages { get; set; }
     }

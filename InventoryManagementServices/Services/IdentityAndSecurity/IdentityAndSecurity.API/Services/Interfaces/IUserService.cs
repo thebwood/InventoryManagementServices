@@ -5,7 +5,8 @@ namespace IdentityAndSecurity.API.Services.Interfaces
 {
     public interface IUserService
     {
-        UserRegistrationModel Register(UserModel request);
-        UserLoginModel Login(UserModel request);
+        UserRegisterResponseModel Register(UserRegisterModel request);
+
+        UserLoginResponseModel Login(UserLoginModel request);
     }
 }

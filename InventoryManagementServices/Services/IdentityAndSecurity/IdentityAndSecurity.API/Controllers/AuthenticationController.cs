@@ -19,7 +19,7 @@ namespace IdentityAndSecurity.API.Controllers
 
         [AllowAnonymous]
         [HttpPost("register")]
-        public ActionResult<UserRegistrationModel> Register(UserModel request)
+        public ActionResult<UserRegisterResponseModel> Register(UserRegisterModel request)
         {
             var response = _service.Register(request);
             if (response != null && response.ErrorMessages != null && response.ErrorMessages.Count > 0)
@@ -31,7 +31,7 @@ namespace IdentityAndSecurity.API.Controllers
 
         [AllowAnonymous]
         [HttpPost("login")]
-        public ActionResult<UserLoginModel> Login(UserModel request)
+        public ActionResult<UserLoginResponseModel> Login(UserLoginModel request)
         {
             var response = _service.Login(request);
             if (response != null && response.ErrorMessages != null && response.ErrorMessages.Count > 0)

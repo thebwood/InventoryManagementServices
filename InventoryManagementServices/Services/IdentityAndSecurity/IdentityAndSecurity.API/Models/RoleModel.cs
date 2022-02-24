@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace IdentityAndSecurity.API.Data
+﻿namespace IdentityAndSecurity.API.Models
 {
-    public partial class Role
+    public class RoleModel
     {
         public Guid Id { get; set; }
         public string RoleName { get; set; }
