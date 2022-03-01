@@ -20,4 +20,8 @@
     <Folder Include="Mappers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\InventoryManagement.Web.Base\InventoryManagement.Web.Base.csproj" />
+  </ItemGroup>
+
 </Project>

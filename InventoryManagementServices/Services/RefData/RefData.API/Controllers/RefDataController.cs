@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using InventoryManagement.Web.Base.Controllers;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,11 +12,11 @@ namespace RefData.API.Controllers
     [EnableCors("SiteCorsPolicy")]
     [Route("api/[controller]")]
     [ApiController]
-    public class RefDataController : ControllerBase
+    public class RefDataController : InventoryManagementController<RefDataController>
     {
         private IRefDataService _service;
         private readonly IMapper _mapper;
-        public RefDataController(IRefDataService service, IMapper mapper)
+        public RefDataController(ILogger<RefDataController> logger, IRefDataService service, IMapper mapper) : base(logger)
         {
             _service = service ??
                 throw new ArgumentNullException(nameof(service));

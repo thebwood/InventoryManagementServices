@@ -1,5 +1,6 @@
 ﻿using IdentityAndSecurity.API.Models;
 using IdentityAndSecurity.API.Services.Interfaces;
+using InventoryManagement.Web.Base.Controllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,11 +9,11 @@ namespace IdentityAndSecurity.API.Controllers
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthenticationController : ControllerBase
+    public class AuthenticationController : InventoryManagementController<AuthenticationController>
     {
         private IUserService _service;
 
-        public AuthenticationController(IUserService service)
+        public AuthenticationController(ILogger<AuthenticationController> logger, IUserService service) : base(logger)
         {
             _service = service;
         }

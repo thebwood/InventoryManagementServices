@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using InventoryManagement.Web.Base.Controllers;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,11 +12,11 @@ namespace Movie.API.Controllers
     [EnableCors("SiteCorsPolicy")]
     [Route("api/[controller]")]
     [ApiController]
-    public class MoviesController : ControllerBase
+    public class MoviesController : InventoryManagementController<MoviesController>
     {
         private IMovieService _service;
         private readonly IMapper _mapper;
-        public MoviesController(IMovieService service, IMapper mapper)
+        public MoviesController(ILogger<MoviesController> logger, IMovieService service, IMapper mapper) : base(logger)
         {
             _service = service ??
                 throw new ArgumentNullException(nameof(service));

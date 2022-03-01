@@ -5,20 +5,21 @@ using System.Net;
 using AutoMapper;
 using Game.API.Services.Interfaces;
 using Microsoft.AspNetCore.Cors;
+using InventoryManagement.Web.Base.Controllers;
 
 namespace Game.API.Controllers
 {
     [EnableCors("SiteCorsPolicy")]
     [Route("api/[controller]")]
     [ApiController]
-    public class GamesController : ControllerBase
+    public class GamesController : InventoryManagementController<GamesController>
     {
 
         private readonly IMapper _mapper;
         private readonly IGameService _service;
 
 
-        public GamesController(IGameService service, IMapper mapper)
+        public GamesController(ILogger<GamesController> logger, IGameService service, IMapper mapper) : base(logger)
         {
             _service = service ??
                 throw new ArgumentNullException(nameof(service));
@@ -47,6 +48,7 @@ namespace Game.API.Controllers
             }
             catch (Exception ex)
             {
+                this.Logger.LogError("Error happened on GetGames", ex);
                 return StatusCode((int)HttpStatusCode.InternalServerError, "A problem happened while handling your request.");
             }
         }
@@ -72,6 +74,7 @@ namespace Game.API.Controllers
             }
             catch (Exception ex)
             {
+                this.Logger.LogError("Error happened on GetGame by ID", ex);
                 return StatusCode((int)HttpStatusCode.InternalServerError, "A problem happened while handling your request.");
             }
         }
