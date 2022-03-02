@@ -1,10 +1,9 @@
-using Game.API.Data;
-using Game.API.Repositories;
-using Game.API.Repositories.Interfaces;
-using Game.API.Services;
-using Game.API.Services.Interfaces;
+using Game.Core.Services;
+using Game.Core.Services.Interfaces;
+using Game.Infrastructure.Entities;
+using Game.Infrastructure.Repositories;
+using Game.Infrastructure.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-
 
 var siteCorsPolicy = "SiteCorsPolicy";
 

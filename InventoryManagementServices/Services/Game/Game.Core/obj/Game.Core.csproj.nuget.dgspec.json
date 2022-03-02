@@ -1,0 +1,283 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Services\\Game\\Game.Core\\Game.Core.csproj": {}
+  },
+  "projects": {
+    "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Common\\InventoryManagement.Common\\InventoryManagement.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Common\\InventoryManagement.Common\\InventoryManagement.Common.csproj",
+        "projectName": "InventoryManagement.Common",
+        "projectPath": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Common\\InventoryManagement.Common\\InventoryManagement.Common.csproj",
+        "packagesPath": "C:\\Users\\brian\\.nuget\\packages\\",
+        "outputPath": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Common\\InventoryManagement.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\brian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Common\\InventoryManagement.Web.Base\\InventoryManagement.Web.Base.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Common\\InventoryManagement.Web.Base\\InventoryManagement.Web.Base.csproj",
+        "projectName": "InventoryManagement.Web.Base",
+        "projectPath": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Common\\InventoryManagement.Web.Base\\InventoryManagement.Web.Base.csproj",
+        "packagesPath": "C:\\Users\\brian\\.nuget\\packages\\",
+        "outputPath": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Common\\InventoryManagement.Web.Base\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\brian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Common\\InventoryManagement.Common\\InventoryManagement.Common.csproj": {
+                "projectPath": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Common\\InventoryManagement.Common\\InventoryManagement.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Services\\Game\\Game.Core\\Game.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Services\\Game\\Game.Core\\Game.Core.csproj",
+        "projectName": "Game.Core",
+        "projectPath": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Services\\Game\\Game.Core\\Game.Core.csproj",
+        "packagesPath": "C:\\Users\\brian\\.nuget\\packages\\",
+        "outputPath": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Services\\Game\\Game.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\brian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Common\\InventoryManagement.Web.Base\\InventoryManagement.Web.Base.csproj": {
+                "projectPath": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Common\\InventoryManagement.Web.Base\\InventoryManagement.Web.Base.csproj"
+              },
+              "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Services\\Game\\Game.Infrastructure\\Game.Infrastructure.csproj": {
+                "projectPath": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Services\\Game\\Game.Infrastructure\\Game.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Services\\Game\\Game.Infrastructure\\Game.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Services\\Game\\Game.Infrastructure\\Game.Infrastructure.csproj",
+        "projectName": "Game.Infrastructure",
+        "projectPath": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Services\\Game\\Game.Infrastructure\\Game.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\brian\\.nuget\\packages\\",
+        "outputPath": "D:\\Development\\GitHub\\Microservices\\InventoryManagementServices\\InventoryManagementServices\\Services\\Game\\Game.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\brian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

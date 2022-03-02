@@ -1,11 +1,9 @@
-﻿using Game.API.Models;
-using Microsoft.AspNetCore.Http;
+﻿using Game.Core.Services.Interfaces;
+using Game.Core.Models;
+using InventoryManagement.Web.Base.Controllers;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using AutoMapper;
-using Game.API.Services.Interfaces;
-using Microsoft.AspNetCore.Cors;
-using InventoryManagement.Web.Base.Controllers;
 
 namespace Game.API.Controllers
 {
@@ -15,29 +13,24 @@ namespace Game.API.Controllers
     public class GamesController : InventoryManagementController<GamesController>
     {
 
-        private readonly IMapper _mapper;
         private readonly IGameService _service;
 
 
-        public GamesController(ILogger<GamesController> logger, IGameService service, IMapper mapper) : base(logger)
+        public GamesController(ILogger<GamesController> logger, IGameService service) : base(logger)
         {
             _service = service ??
                 throw new ArgumentNullException(nameof(service));
-            _mapper = mapper ??
-                throw new ArgumentNullException(nameof(mapper));
         }
 
         [HttpGet]
-        [ProducesResponseType(typeof(GamesModel), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(GamesModel), (int)HttpStatusCode.NotFound)]
-        [ProducesResponseType(typeof(GamesModel), (int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public IActionResult GetGames()
         {
             try
             {
-                var data = _service.GetGames();
-
-                var retVal = _mapper.Map<IEnumerable<GamesModel>>(data);
+                var retVal = _service.GetGames();
 
                 if (retVal != null)
                 {
@@ -54,16 +47,14 @@ namespace Game.API.Controllers
         }
 
         [HttpGet("{gameId}")]
-        [ProducesResponseType(typeof(GamesModel), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(GamesModel), (int)HttpStatusCode.NoContent)]
-        [ProducesResponseType(typeof(GamesModel), (int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public IActionResult GetGame(Guid? gameId)
         {
             try
             {
-                var data = _service.GetGame(gameId);
-
-                var retVal = _mapper.Map<GamesModel>(data);
+                var retVal = _service.GetGame(gameId);
 
                 if (retVal != null)
                 {
@@ -79,12 +70,13 @@ namespace Game.API.Controllers
             }
         }
         [HttpPost("search")]
-        [ProducesResponseType(typeof(List<GameSearchResultsModel>), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(List<GameSearchResultsModel>), (int)HttpStatusCode.NoContent)]
-        [ProducesResponseType(typeof(List<GameSearchResultsModel>), (int)HttpStatusCode.BadRequest)]
-        [ProducesResponseType(typeof(List<GameSearchResultsModel>), (int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public IActionResult SearchGames([FromBody] GameSearchModel searchRequest)
         {
+
             try
             {
                 var searchResults = _service.SearchGames(searchRequest);
@@ -100,16 +92,14 @@ namespace Game.API.Controllers
 
 
         [HttpGet("ratings")]
-        [ProducesResponseType(typeof(GameRatingsModel), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(GameRatingsModel), (int)HttpStatusCode.NotFound)]
-        [ProducesResponseType(typeof(GameRatingsModel), (int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public IActionResult GetGameRatings()
         {
             try
             {
-                var data = _service.GetGameRatings();
-
-                var retVal = _mapper.Map<IEnumerable<GameRatingsModel>>(data);
+                var retVal = _service.GetGameRatings();
 
                 if (retVal.Count() > 0)
                 {
@@ -126,15 +116,14 @@ namespace Game.API.Controllers
 
 
         [HttpPost]
-        [ProducesResponseType(typeof(List<string>), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(List<string>), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public IActionResult UpdateGame([FromBody] GamesModel game)
         {
             var errorList = new List<string>();
 
             try
             {
-
                 errorList = _service.SaveDetail(game);
                 if (errorList.Count > 0)
                 {
