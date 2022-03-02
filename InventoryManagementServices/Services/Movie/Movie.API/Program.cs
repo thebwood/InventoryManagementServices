@@ -1,9 +1,9 @@
-using Movie.API.Repositories;
-using Movie.API.Repositories.Interfaces;
-using Movie.API.Services;
-using Movie.API.Services.Interfaces;
+using Movie.Core.Services;
+using Movie.Core.Services.Interfaces;
+using Movie.Infrastructure.Entities;
+using Movie.Infrastructure.Repositories;
+using Movie.Infrastructure.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Movie.API.Data;
 
 var siteCorsPolicy = "SiteCorsPolicy";
 

@@ -1,10 +1,8 @@
-﻿using AutoMapper;
+﻿using Movie.Core.Services.Interfaces;
+using Movie.Core.Models;
 using InventoryManagement.Web.Base.Controllers;
 using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Movie.API.Models;
-using Movie.API.Services.Interfaces;
 using System.Net;
 
 namespace Movie.API.Controllers
@@ -15,27 +13,22 @@ namespace Movie.API.Controllers
     public class MoviesController : InventoryManagementController<MoviesController>
     {
         private IMovieService _service;
-        private readonly IMapper _mapper;
-        public MoviesController(ILogger<MoviesController> logger, IMovieService service, IMapper mapper) : base(logger)
+        public MoviesController(ILogger<MoviesController> logger, IMovieService service) : base(logger)
         {
             _service = service ??
                 throw new ArgumentNullException(nameof(service));
-            _mapper = mapper ??
-                throw new ArgumentNullException(nameof(mapper));
         }
 
 
         [HttpGet]
-        [ProducesResponseType(typeof(List<MoviesModel>), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(List<MoviesModel>), (int)HttpStatusCode.NotFound)]
-        [ProducesResponseType(typeof(List<MoviesModel>), (int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public IActionResult GetMovies()
         {
             try
             {
-                var data = _service.GetMovies();
-
-                var retVal = _mapper.Map<IEnumerable<MoviesModel>>(data);
+                var retVal = _service.GetMovies();
 
                 if (retVal != null)
                 {
@@ -51,10 +44,10 @@ namespace Movie.API.Controllers
         }
 
         [HttpPost("search")]
-        [ProducesResponseType(typeof(List<MovieSearchResultsModel>), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(List<MovieSearchResultsModel>), (int)HttpStatusCode.NoContent)]
-        [ProducesResponseType(typeof(List<MovieSearchResultsModel>), (int)HttpStatusCode.BadRequest)]
-        [ProducesResponseType(typeof(List<MovieSearchResultsModel>), (int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public IActionResult SearchMovies([FromBody] MovieSearchModel searchRequest)
         {
             try
@@ -71,16 +64,14 @@ namespace Movie.API.Controllers
         }
 
         [HttpGet("{movieId}")]
-        [ProducesResponseType(typeof(MoviesModel), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(MoviesModel), (int)HttpStatusCode.NoContent)]
-        [ProducesResponseType(typeof(MoviesModel), (int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NoContent)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public IActionResult GetMovie(Guid? movieId)
         {
             try
             {
-                var data = _service.GetMovie(movieId);
-
-                var retVal = _mapper.Map<MoviesModel>(data);
+                var retVal = _service.GetMovie(movieId);
 
                 if (retVal != null)
                 {
@@ -97,16 +88,14 @@ namespace Movie.API.Controllers
 
 
         [HttpGet("ratings")]
-        [ProducesResponseType(typeof(MovieRatingsModel), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(MovieRatingsModel), (int)HttpStatusCode.NotFound)]
-        [ProducesResponseType(typeof(MovieRatingsModel), (int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public IActionResult GetMovieRatings()
         {
             try
             {
-                var data = _service.GetMovieRatings();
-
-                var retVal = _mapper.Map<IEnumerable<MovieRatingsModel>>(data);
+                var retVal = _service.GetMovieRatings();
 
                 if (retVal.Count() > 0)
                 {
@@ -122,16 +111,14 @@ namespace Movie.API.Controllers
         }
 
         [HttpGet("genres")]
-        [ProducesResponseType(typeof(MovieGenresModel), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(MovieGenresModel), (int)HttpStatusCode.NotFound)]
-        [ProducesResponseType(typeof(MovieGenresModel), (int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.NotFound)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         public IActionResult GetMovieGenres()
         {
             try
             {
-                var data = _service.GetMovieGenres();
-
-                var retVal = _mapper.Map<IEnumerable<MovieGenresModel>>(data);
+                var retVal = _service.GetMovieGenres();
 
                 if (retVal.Count() > 0)
                 {
@@ -147,8 +134,8 @@ namespace Movie.API.Controllers
         }
 
         [HttpPost]
-        [ProducesResponseType(typeof(List<string>), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(List<string>), (int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public IActionResult UpdateMovie([FromBody] MoviesModel movie)
         {
             var errorList = new List<string>();

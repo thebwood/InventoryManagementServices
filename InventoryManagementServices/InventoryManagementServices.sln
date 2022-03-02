@@ -37,13 +37,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityAndSecurity.API", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{2A29747E-0402-4E27-ADA4-7BCA23C33654}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagement.Common", "Common\InventoryManagement.Common\InventoryManagement.Common.csproj", "{F4AFA519-04A9-443D-91D2-091C8F0FA4CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryManagement.Common", "Common\InventoryManagement.Common\InventoryManagement.Common.csproj", "{F4AFA519-04A9-443D-91D2-091C8F0FA4CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventoryManagement.Web.Base", "Common\InventoryManagement.Web.Base\InventoryManagement.Web.Base.csproj", "{7890824B-3C2F-4A7B-9D20-E4A0A81292CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InventoryManagement.Web.Base", "Common\InventoryManagement.Web.Base\InventoryManagement.Web.Base.csproj", "{7890824B-3C2F-4A7B-9D20-E4A0A81292CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Core", "Services\Game\Game.Core\Game.Core.csproj", "{2631C0D3-0666-46FE-9ECF-B4D5B211F89E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game.Core", "Services\Game\Game.Core\Game.Core.csproj", "{2631C0D3-0666-46FE-9ECF-B4D5B211F89E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Infrastructure", "Services\Game\Game.Infrastructure\Game.Infrastructure.csproj", "{3F0E9EB3-7C5A-4377-8042-6B96821B1F88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Game.Infrastructure", "Services\Game\Game.Infrastructure\Game.Infrastructure.csproj", "{3F0E9EB3-7C5A-4377-8042-6B96821B1F88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.Core", "Services\Movie\Movie.Core\Movie.Core.csproj", "{44BE8BAA-DA6C-4B2F-ABDF-AD14A0E2DE81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.Infrastructure", "Services\Movie\Movie.Infrastructure\Movie.Infrastructure.csproj", "{C59BC4E4-8FDD-4332-9B3B-5236A5CBA72D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +99,14 @@ Global
 		{3F0E9EB3-7C5A-4377-8042-6B96821B1F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F0E9EB3-7C5A-4377-8042-6B96821B1F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F0E9EB3-7C5A-4377-8042-6B96821B1F88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44BE8BAA-DA6C-4B2F-ABDF-AD14A0E2DE81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44BE8BAA-DA6C-4B2F-ABDF-AD14A0E2DE81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44BE8BAA-DA6C-4B2F-ABDF-AD14A0E2DE81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44BE8BAA-DA6C-4B2F-ABDF-AD14A0E2DE81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C59BC4E4-8FDD-4332-9B3B-5236A5CBA72D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C59BC4E4-8FDD-4332-9B3B-5236A5CBA72D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C59BC4E4-8FDD-4332-9B3B-5236A5CBA72D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C59BC4E4-8FDD-4332-9B3B-5236A5CBA72D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -117,6 +129,8 @@ Global
 		{7890824B-3C2F-4A7B-9D20-E4A0A81292CE} = {2A29747E-0402-4E27-ADA4-7BCA23C33654}
 		{2631C0D3-0666-46FE-9ECF-B4D5B211F89E} = {0C10234A-CB78-488F-9130-6349DFDBEFBD}
 		{3F0E9EB3-7C5A-4377-8042-6B96821B1F88} = {0C10234A-CB78-488F-9130-6349DFDBEFBD}
+		{44BE8BAA-DA6C-4B2F-ABDF-AD14A0E2DE81} = {2AA44049-16AE-4EC7-9623-B7C89C7F2E8E}
+		{C59BC4E4-8FDD-4332-9B3B-5236A5CBA72D} = {2AA44049-16AE-4EC7-9623-B7C89C7F2E8E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BA75D78A-7A7A-471B-AACE-A2C1CA11F010}

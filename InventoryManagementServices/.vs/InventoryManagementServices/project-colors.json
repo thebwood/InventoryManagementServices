@@ -55,7 +55,42 @@
       "ProjectGuid": "89a5cfbf-aa5a-4417-b172-0abc7f183eac",
       "DisplayName": "IdentityAndSecurity.API",
       "ColorIndex": 9
+    },
+    "f4afa519-04a9-443d-91d2-091c8f0fa4cf": {
+      "ProjectGuid": "f4afa519-04a9-443d-91d2-091c8f0fa4cf",
+      "DisplayName": "InventoryManagement.Common",
+      "ColorIndex": 10
+    },
+    "7890824b-3c2f-4a7b-9d20-e4a0a81292ce": {
+      "ProjectGuid": "7890824b-3c2f-4a7b-9d20-e4a0a81292ce",
+      "DisplayName": "InventoryManagement.Web.Base",
+      "ColorIndex": 11
+    },
+    "2631c0d3-0666-46fe-9ecf-b4d5b211f89e": {
+      "ProjectGuid": "2631c0d3-0666-46fe-9ecf-b4d5b211f89e",
+      "DisplayName": "Game.Core",
+      "ColorIndex": 12
+    },
+    "3f0e9eb3-7c5a-4377-8042-6b96821b1f88": {
+      "ProjectGuid": "3f0e9eb3-7c5a-4377-8042-6b96821b1f88",
+      "DisplayName": "Game.Infrastructure",
+      "ColorIndex": 13
+    },
+    "316dbccd-acef-4296-8a70-3451ee22c9fe": {
+      "ProjectGuid": "316dbccd-acef-4296-8a70-3451ee22c9fe",
+      "DisplayName": "Game.Shared",
+      "ColorIndex": 14
+    },
+    "44be8baa-da6c-4b2f-abdf-ad14a0e2de81": {
+      "ProjectGuid": "44be8baa-da6c-4b2f-abdf-ad14a0e2de81",
+      "DisplayName": "Movie.Core",
+      "ColorIndex": 15
+    },
+    "c59bc4e4-8fdd-4332-9b3b-5236a5cba72d": {
+      "ProjectGuid": "c59bc4e4-8fdd-4332-9b3b-5236a5cba72d",
+      "DisplayName": "Movie.Infrastructure",
+      "ColorIndex": 0
     }
   },
-  "NextColorIndex": 10
+  "NextColorIndex": 1
 }
