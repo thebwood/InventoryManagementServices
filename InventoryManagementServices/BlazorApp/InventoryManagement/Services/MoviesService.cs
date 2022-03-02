@@ -15,26 +15,26 @@ namespace InventoryManagement.Services
 
         public async Task<List<MoviesModel>> GetMovies()
         {
-            var baseURL = "https://localhost:44349/";
+            var baseURL = "https://localhost:5091/";
             return await this.GetAPIResult<List<MoviesModel>>(baseURL, "api/movies");
         }
 
         public async Task<List<MovieSearchResultsModel>> SearchMovies(MovieSearchModel searchModel)
         {
-            var baseURL = "https://localhost:44349/";
+            var baseURL = "https://localhost:5091/";
             return await this.PostAPIResult<List<MovieSearchResultsModel>, MovieSearchModel>(baseURL, "api/movies/search", searchModel);
         }
 
         public async Task<MoviesModel> GetMovie(long movieId)
         {
-            var baseURL = "https://localhost:44349/";
+            var baseURL = "https://localhost:5091/";
             return await this.GetAPIResult<MoviesModel>(baseURL, "api/movies/" + movieId.ToString());
         }
 
 
         public async Task<List<string>> SaveMovie(MoviesModel movie)
         {
-            var baseURL = "https://localhost:44349/";
+            var baseURL = "https://localhost:5091/";
             return await this.PostAPIResult<List<string>, MoviesModel >(baseURL, "api/movies/", movie);
         }
 
@@ -44,7 +44,7 @@ namespace InventoryManagement.Services
 
         public async Task<List<MovieRatingsModel>> GetMovieRatings()
         {
-            var baseURL = "https://localhost:44349/";
+            var baseURL = "https://localhost:5091/";
             return await this.GetAPIResult<List<MovieRatingsModel>>(baseURL, "api/movies/ratings");
         }
 
@@ -55,7 +55,7 @@ namespace InventoryManagement.Services
 
         public async Task<List<MovieGenresModel>> GetMovieGenres()
         {
-            var baseURL = "https://localhost:44349/";
+            var baseURL = "https://localhost:5091/";
             return await this.GetAPIResult<List<MovieGenresModel>>(baseURL, "api/movies/genres");
         }
 
